@@ -1,0 +1,61 @@
+<html lang="en-us">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="refresh" content=#home/>
+    
+    <!--  This appears as your tab's title -->
+    <title>My Sheets Site by Kai</title>
+    
+    <!-- Call on style.css -->
+    <link rel="stylesheet" href="../style.css" type="text/css" />
+
+    <!--  Javascript goes here... sorry we're using jquery -->
+    <script src="//code.jquery.com/jquery-3.6.0.min.js" type="text/javascript"></script>
+    <script src="../script.js" type="text/javascript"></script>
+    <script src="../editor.js" type="text/javascript"></script>
+  </head>
+  
+  
+  
+  <body>
+    <header>
+      <h1>
+        <a href="../index.html">WakuWaku</a>
+      </h1>
+      <nav>
+        <a href="editor.html">Editor</a>
+        <a href="../index.html">Gallery</a>
+      </nav>
+    </header>
+    
+    
+    <main>
+      
+
+    <h2 id="Numbersgoer">hallo hallo hallo. such dir einen süßen Frame aus und pack dein Bild hinein :).</h2>
+    
+   <div id="inputer">
+   <form action="copier"> 
+        <input type="text" placeholder="Your Name" id="YourName">
+        <br>
+         <input type="text" placeholder="What are we looking at?" id="HeaderName">      
+          <br>
+        <input type="color" id="Color" value="#1E90FF" onchange=ChangeEditorOnce()>
+              <br>
+       
+      <br>
+        <label for="background-image">your background image URL:</label>
+        <input type="url" id="Bg-Image" placeholder="https://your-image.de">
+        
+    </form>
+   
+<!-- The button used to copy the text -->
+<button onclick="CopyEachOne()">Copy text and change stuff</button>
+   
+    </div>
+        
+    </main>
+    
+  </body> </html>

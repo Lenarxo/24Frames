@@ -1,0 +1,100 @@
+body {
+  font-family: monospace;
+  
+}
+
+
+table, th, td {
+  border:1px solid black;
+}
+
+
+#people{
+  width: auto;
+  margin: auto;
+    flex: 1;
+    display: flex;
+    overflow: auto;
+  align-items:baseline;
+  flex-direction: row;
+  flex-flow: wrap;
+}
+
+
+#people .p{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  
+  min-width: 350px; 
+  min-height: auto;
+
+  padding: auto;
+  margin: 10px;
+  text-overflow: ellipsis;
+}
+
+
+img {
+  width: 200px;
+  height: 200px;
+  border-radius: 2%;
+  object-fit: cover;
+
+
+}
+
+.Kunstwerk {
+   font-size: 25px;
+  
+}
+
+.name {
+  background-color: #d2d8ff;
+}
+
+
+
+
+
+body {
+  font-size: 18px;
+  text-decoration: none;
+  font-family: system-ui, sans-serif;
+  line-height: 1.4;
+  color: var(--textcolor);
+  background: var(--bgcolor);
+  position: relative;
+  max-width: 64em;  /* remove this for a full-width layout */
+  margin: 0 auto;  /* centers the layout */
+}
+
+
+
+/* ------- Header ------- */
+a {
+  text-decoration: none;
+  color: black;
+}
+header {
+  padding: 5vw 5vw 1vw 5vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /*position: fixed; */
+  width: 100%;
+  z-index: 66;
+  background-color: #e158ba;
+}
+
+h1 {
+  text-decoration: none;
+  font-size: 3em;
+  flex: 1; /* pushes nav to the right */
+  white-space: nowrap;
+  padding: 0 5vw .5em 0;
+}
+
+nav { 
+font-size: 1em}
