@@ -18,6 +18,7 @@ table, th, td {
   align-items:baseline;
   flex-direction: row;
   flex-flow: wrap;
+  justify-content: center;
 }
 
 
@@ -41,6 +42,7 @@ img {
   height: 200px;
   border-radius: 2%;
   object-fit: cover;
+  margin: 20px;
 
 
 }
@@ -82,18 +84,17 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  /*position: fixed; */
-  width: 100%;
+  width: auto;
   z-index: 66;
   background-color: #e158ba;
+  color: aliceblue;
 }
 
-h1 {
-  text-decoration: none;
-  font-size: 3em;
+header h1 {
+  font-size: 1em;
   flex: 1; /* pushes nav to the right */
   white-space: nowrap;
-  padding: 0 5vw .5em 0;
+  padding: 0 5vw 0.5em 0;
 }
 
 nav { 
