@@ -1,14 +1,17 @@
 body {
   font-family: monospace;
-  
+  font-size: 18px;
+  text-decoration: none;
+  line-height: 1.4;
+  color: var(--textcolor);
+  background: var(--bgcolor);
+  position: relative;
+  max-width: 64em;  /* remove this for a full-width layout */
+  margin: 0 auto;  /* centers the layout */
 }
 
 
-table, th, td {
-  border:1px solid black;
-}
-
-
+/* ------- Gallery Darstellung ------- */
 #people{
   width: auto;
   margin: auto;
@@ -37,19 +40,34 @@ table, th, td {
 }
 
 
-img {
+.img {
+  position: relative;
+  margin: 20px;
+}
+
+.img img {
+
   width: 200px;
   height: 200px;
-  border-radius: 2%;
   object-fit: cover;
-  margin: 20px;
-
-
+  z-index: 0; /* Make sure it’s on top */
 }
+
+.imgEffects {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  display: block; /* Ensure it displays as a block-level element */
+  z-index: 1; /* Make sure it’s on top */
+}
+
+
 
 .Kunstwerk {
    font-size: 25px;
-  
 }
 
 .name {
@@ -60,17 +78,38 @@ img {
 
 
 
-body {
-  font-size: 18px;
-  text-decoration: none;
-  font-family: system-ui, sans-serif;
-  line-height: 1.4;
-  color: var(--textcolor);
-  background: var(--bgcolor);
-  position: relative;
-  max-width: 64em;  /* remove this for a full-width layout */
-  margin: 0 auto;  /* centers the layout */
+
+/* ------- Formular CSS ------- */
+
+input {
+
+  padding:5px;  /* Adds space inside the input fields */
+  display: block; /* Ensures each input is on a new line */
+  width: 100%;   /* Full width for better readability */
+  box-sizing: border-box; /* Includes padding in the element's total width */
+    margin: 0 auto;  /* centers the layout */
 }
+
+
+input[type=color]{
+  height: 50px;
+  width: 250px;
+
+  margin: 0 auto; /* Horizontally center */
+
+}
+
+form {
+  max-width: 500px; /* Sets a maximum width for the form */
+  margin: 0 auto;   /* Centers the form on the page */
+}
+
+.checkbox-container {
+  display: flex;
+  margin: 10px 0; /* Add some space between the checkboxes */
+  align-items: le; /* Center align the items vertically */
+}
+
 
 
 

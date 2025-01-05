@@ -1,0 +1,164 @@
+<html lang="en-us">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="refresh" content=#home/>
+    
+    <!--  This appears as your tab's title -->
+    <title>My Sheets Site by Kai</title>
+    
+    <!-- Call on style.css -->
+    <link rel="stylesheet" href="../style.css" type="text/css" />
+
+    <!--  Javascript goes here... sorry we're using jquery -->
+    <script src="//code.jquery.com/jquery-3.6.0.min.js" type="text/javascript"></script>
+    <script src="../script.js" type="text/javascript"></script>
+   <!--  <script src="../editor.js" type="text/javascript"></script>-->
+  </head>
+  
+  
+  
+  <body>
+    <header>
+      <h1>
+        <a href="../index.html">WakuWaku</a>
+      </h1>
+      <nav>
+        <a href="editor.html">Editor</a>
+        <a href="../index.html">Gallery</a>
+      </nav>
+    </header>
+    
+    
+    <main>
+      
+
+    <h2 id="Numbersgoer">hallo hallo hallo. such dir einen süßen Frame aus und pack dein Bild hinein :).</h2>
+    
+   <div id="inputer">
+   <form action="copier"> 
+     
+     
+     
+     
+     
+        <input type="text" placeholder="Your Name" id="YourName">
+        <br>
+        <input type="text" placeholder="What are we looking at?" id="HeaderName">      
+        <br>
+        <input type="color" id="Color" value="#1E90FF" onchange=ChangeEditorOnce()>
+      <br>
+        <label for="background-image">your background image URL:</label>
+        <input type="url" id="Bg-Image" placeholder="https://your-image.de">
+     
+
+       
+  <div class="checkbox-container">
+    <input type="checkbox" id="GreenDot" name="GreenDot" />
+      <label for="GreenDot">GreenDot</label>    
+  </div>
+     
+  <div class="checkbox-container">
+      <input type="checkbox" id="horns" name="horns" />
+      <label for="horns">Horns</label>
+  </div>
+     
+     
+
+ <div class="checkbox-container">
+      <input type="checkbox" id="001Frame" class="likeradio" unchecked/>
+<label for="Frame1"><img src="./ImageEffects/001Frame.png" width="100"></label>
+  </div>
+
+ <div class="checkbox-container">
+      <input type="checkbox" id="002Frame" class="likeradio" />
+<label for="Frame1"><img src="./ImageEffects/002Frame.png" width="100"></label>
+  </div>     
+     
+   <div class="checkbox-container">
+      <input type="checkbox" id="003Frame"  class="likeradio"/>
+<label for="Frame1"><img src="./ImageEffects/003Frame.png" width="100"></label>
+  </div>   
+</form>
+
+     
+      
+
+
+    
+     
+
+     
+     
+     
+<!-- The button used to copy the text -->
+
+<button onclick="CopyEachOne()">Copy text and change stuff</button> <br>
+
+  <!--Send it Over -->   
+<form action="https://docs.google.com/forms/d/e/1FAIpQLSeIePQe2RlzDWoSGJ9k7rjwft-QQkpKY2_qSFwnrNCorADV7w/viewform">
+    <input type="submit" value="Send it to the Google Form" />
+  
+  
+</form>
+    </div>
+    </main>
+    
+    
+    
+    <script>
+      //let the frame checkboxes behave like radio buttons
+$(".likeradio").change(function()
+ {
+  $(".likeradio").prop('checked',false);
+  $(this).prop('checked',true);
+});
+      
+      
+  function CopyEachOne() {
+    ChangeEditorOnce();
+var AllText ="";    
+const arrayInputs = [ //here the IDS of the inputs which are used for the clipboard
+    "YourName",
+    "Color",
+    "Bg-Image",
+    "HeaderName",
+    "horns",
+    "GreenDot",
+"001Frame",
+ "002Frame",
+  "003Frame",
+    
+];
+    
+    // sends stuff to the clipboard
+//arrayInputs.forEach(function(Inputs) {
+       arrayInputs.forEach(function (inputId) {
+  const inputElem = document.getElementById(inputId);
+         
+      let InputWert = "";
+           
+          if (inputElem.type === "checkbox") {
+            InputWert = inputElem.checked ? inputElem.id : ""; // Use id if checked, empty if not
+          } else {
+            InputWert = inputElem.value;
+          }
+  
+  
+  //  var copyTrenner = document.getElementById(Inputs).value + "Ω"; //trenn von Inputs
+    AllText += InputWert + "Ω";//copyTrenner ; //append to existing
+ console.log("These are your inputs right now:"+AllText);
+    navigator.clipboard.writeText(AllText);
+}); 
+}
+
+
+//changes Site
+function ChangeEditorOnce(){
+        document.body.style.background = document.getElementById("Color").value ;
+       // document.getElementById("Numbersgoer").textContent = "hello "+document.getElementById("HeaderName").value ;
+    
+}
+    </script>
+  </body> </html>

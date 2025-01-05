@@ -1,6 +1,7 @@
 
 var SPREADSHEET_ID = "1OjjfZ0Nq83i2813iPbAHE3ejN0U_hqwzx7vwUHPswY8";
-var TAB_NAME = "Formularantworten 1";
+var TAB_NAME = "Sorted";
+
 
 
 /*https://docs.google.com/spreadsheets/d/1T-i7tdeMTNP-t92tlzmoRQeai5vcJ1OVRE-WcnjyYsQ/edit?usp=sharing
@@ -39,7 +40,7 @@ $(document).ready(function () {
 
       // the number of the InputValuesArray and what it refers to can be seen in the editor. Its the array "arrayInputs" it starts with 0
        // Erklärung für Backticks also hinzufügung https://www.shecodes.io/athena/315298-how-to-use-backtick-in-javascript
-      console.log(entry); // Debug console log
+     console.log(entry); // Debug console log
    
            let myFrames = $(`<div class='p' style=background-color:${InputValuesArray.at(1)}>
               <h2 class="name">` + index + " - " +
@@ -47,12 +48,12 @@ $(document).ready(function () {
               </div>`).appendTo("#people");  //all these lines gets the InputValues from the Array at the position definied in the editor and adds it into html with backticks
       
 
+          var UsersBackground;
 
-
-           
+           // Second Step add the main image
                if (InputValuesArray.at(2) !== "" && InputValuesArray.at(2).length > 3) { //the image link is not nothing( !== means is not; "" compares it to an empty string) AND (&&)...
                  //AND not too short that it couldnt work (because its string length is bigger than 3)-- if these things are both true we guess that the user uploaded file to the drive 
-               $(`<div class='img'><img src="` + InputValuesArray.at(2) + `"></div>`).appendTo(myFrames); //Inserst the images from the URL part of LongString at the second postion (not counting 0)
+                UsersBackground = $(`<div class='img'><img src="` + InputValuesArray.at(2) + `"></div>`).appendTo(myFrames); //Inserst the images from the URL part of LongString at the second postion (not counting 0)
               }else{
                   if (entry.UploadImage+ "" !== "undefined"){ // if the image is undefined then there was no upload so before we add it we check if it exists
 
@@ -60,9 +61,33 @@ $(document).ready(function () {
                 var beforeReplace = "https://drive.google.com/open?id="; //the URL that is send with
                 var afterReplace = "https://lh3.googleusercontent.com/d/"; // where is the high res image hosted in a machine readable way without any distrations of the google drive
                     
-                 $(`<div class='img'><img src="` + uploadedImgParsed.replace(beforeReplace,afterReplace) + `"></div>`).appendTo(myFrames);  
+                UsersBackground =  $(`<div class='img'><img src="` + uploadedImgParsed.replace(beforeReplace,afterReplace) + `"></div>`).appendTo(myFrames);  
                     //inserting the google drive image Url and changing the beforeReplace to AfterReplace with the string operator replace
                  }}
+      
+          // all the rest
+      
+      
+      // checkbox Horns is added
+          if (InputValuesArray.at(4) && InputValuesArray.at(4) == "on") {
+            $(`<div class='imgEffects'><img src="` + "./ImageEffects/001Overlay.png" + `"></div>`).appendTo(UsersBackground);   }
+      
+      
+                if (InputValuesArray.at(5) && InputValuesArray.at(5) == "on") {
+            $(`<div class='imgEffects'><img src="` + "./ImageEffects/002Overlay.png" + `"></div>`).appendTo(UsersBackground);   }
+      
+            
+      
+        if (InputValuesArray.at(6) && InputValuesArray.at(6) == "001Frame") {
+            $(`<div class='imgEffects'><img src="` + "./ImageEffects/001Frame.png" + `"></div>`).appendTo(UsersBackground);   }
+       
+              if (InputValuesArray.at(7) && InputValuesArray.at(7) == "002Frame") {
+            $(`<div class='imgEffects'><img src="` + "./ImageEffects/002Frame.png" + `"></div>`).appendTo(UsersBackground);   }
+       
+              if (InputValuesArray.at(8) && InputValuesArray.at(8) == "003Frame") {
+            $(`<div class='imgEffects'><img src="` + "./ImageEffects/003Frame.png" + `"></div>`).appendTo(UsersBackground);   }
+       
+      
       //     console.log(uploadedImgParsed.replace(beforeReplace,afterReplace));
     }); // the end of data forEach our function
     
