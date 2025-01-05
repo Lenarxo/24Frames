@@ -42,7 +42,7 @@ $(document).ready(function () {
        // Erklärung für Backticks also hinzufügung https://www.shecodes.io/athena/315298-how-to-use-backtick-in-javascript
      console.log(entry); // Debug console log
    
-           let myFrames = $(`<div class='p' style=background-color:${InputValuesArray.at(1)}>
+           let myFrames = $(`<div class='p'}>
               <h2 class="name">` + index + " - " +
               ` <span class='Kunstwerk'>` + InputValuesArray.at(0) + `  
               </div>`).appendTo("#people");  //all these lines gets the InputValues from the Array at the position definied in the editor and adds it into html with backticks
@@ -67,13 +67,16 @@ $(document).ready(function () {
       
           // all the rest
       
-      
+      if (InputValuesArray.at(1) && UsersBackground ) {
+       $(`<div class='bilderrahmen' style=background-color:${InputValuesArray.at(1)}></div>`).appendTo(myFrames);   }
+    //  `<div class='p' style=background-color:${InputValuesArray.at(1)}>
+
       // checkbox Horns is added
-          if (InputValuesArray.at(4) && InputValuesArray.at(4) == "on") {
+          if (InputValuesArray.at(4) && InputValuesArray.at(4) == "horns") {
             $(`<div class='imgEffects'><img src="` + "./ImageEffects/001Overlay.png" + `"></div>`).appendTo(UsersBackground);   }
       
       
-                if (InputValuesArray.at(5) && InputValuesArray.at(5) == "on") {
+                if (InputValuesArray.at(5) && InputValuesArray.at(5) == "GreenDot") {
             $(`<div class='imgEffects'><img src="` + "./ImageEffects/002Overlay.png" + `"></div>`).appendTo(UsersBackground);   }
       
             
