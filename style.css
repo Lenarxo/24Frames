@@ -37,8 +37,15 @@ body {
   padding: auto;
   margin: 10px;
   text-overflow: ellipsis;
-  z-index: 2;
+  z-index: 3;
   overflow: hidden; 
+  
+  
+  background-color: #FFC466;
+outline-color: #FFC466;
+  outline-style: dotted;
+  outline-width: 4px;
+  outline-offset: -2px;
 }
 
 .bilderrahmen {
@@ -54,6 +61,7 @@ body {
   position: relative;
   margin: 20px;
     z-index: 3; /* Make sure it’s on top */
+  padding-bottom: 5%;
 }
 
 .img img {
