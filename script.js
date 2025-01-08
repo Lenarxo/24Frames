@@ -43,7 +43,7 @@ $(document).ready(function () {
      console.log(entry); // Debug console log
    
            let myFrames = $(`<div class='p'}>
-              <h2 class="name">` + index + " - " +
+              <h2 class="name">` +
               ` <span class='Kunstwerk'>` + InputValuesArray.at(0) + `  
               </div>`).appendTo("#people");  //all these lines gets the InputValues from the Array at the position definied in the editor and adds it into html with backticks
       
