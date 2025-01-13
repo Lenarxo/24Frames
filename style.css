@@ -113,33 +113,36 @@ outline-color: #e8ff66;
 /* ------- Formular CSS ------- */
 
 input {
-
-  padding:4px;  /* Adds space inside the input fields */
+  padding: 4px; /* Adds space inside the input fields */
   display: block; /* Ensures each input is on a new line */
-  width: 100%;   /* Full width for better readability */
+  width: 100%; /* Full width for better readability */
   box-sizing: border-box; /* Includes padding in the element's total width */
-    margin: 0 auto;  /* centers the layout */
+  margin: 0 auto; /* Centers the layout */
+  border: 2px solid pink; /* Adds a pink border around the input fields */
 }
 
-
-input[type=color]{
+input[type=color] {
   height: 5px;
   width: 250px;
-
   margin: 0 auto; /* Horizontally center */
-
+  border: 2px solid pink; /* Adds a pink border around the color input */
 }
 
 form {
   max-width: 500px; /* Sets a maximum width for the form */
-  margin: 0 auto;   /* Centers the form on the page */
+  margin: 0 auto; /* Centers the form on the page */
+  border: 2px solid pink; /* Adds a pink border around the form */
+  padding: 10px; /* Adds some padding inside the form */
 }
 
 .checkbox-container {
   display: flex;
-  margin: 10px 0; /* Add some space between the checkboxes */
-  align-items: le; /* Center align the items vertically */
+  margin: 10px 0; /* Adds some space between the checkboxes */
+  align-items: center; /* Centers the items vertically */
+  border: 2px solid pink; /* Adds a pink border around the checkbox container */
+  padding: 10px; /* Adds some padding inside the checkbox container */
 }
+
 
 
 
