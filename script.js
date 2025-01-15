@@ -66,29 +66,37 @@ $(document).ready(function () {
                  }}
       
           // all the rest
-      
+    
+
+            // damit es nicht auch mit drin ist sondern dahinter 
+       var RahmenHintermBackground;
       if (InputValuesArray.at(1) && UsersBackground ) {
-       $(`<div class='bilderrahmen' style=background-color:${InputValuesArray.at(1)}></div>`).appendTo(myFrames);   }
+      RahmenHintermBackground = $(`<div class='bilderrahmen' style=background-color:${InputValuesArray.at(1)}></div>`).appendTo(myFrames);   }
     //  `<div class='p' style=background-color:${InputValuesArray.at(1)}>
 
+      
+      
+              // alles hierdrin ist zum davorvorschieben FAlls man etwas davor haben möchte
+        var RahmenVormBackground = $(`<div class='ImageEffectsContainter'></div>`).appendTo(myFrames);  
+      
       // checkbox Horns is added
           if (InputValuesArray.at(4) && InputValuesArray.at(4) == "horns") {
-            $(`<div class='imgEffects'><img src="` + "./ImageEffects/001Overlay.png" + `"></div>`).appendTo(UsersBackground);   }
+            $(`<div class='imgEffects'><img src="` + "./ImageEffects/001Overlay.png" + `"></div>`).appendTo(RahmenHintermBackground);   }
       
       
                 if (InputValuesArray.at(5) && InputValuesArray.at(5) == "GreenDot") {
-            $(`<div class='imgEffects'><img src="` + "./ImageEffects/002Overlay.png" + `"></div>`).appendTo(UsersBackground);   }
+            $(`<div class='imgEffects'><img src="` + "./ImageEffects/002Overlay.png" + `"></div>`).appendTo(RahmenHintermBackground);   }
       
             
       
         if (InputValuesArray.at(6) && InputValuesArray.at(6) == "001Frame") {
-            $(`<div class='imgEffects'><img src="` + "./ImageEffects/001Frame.png" + `"></div>`).appendTo(UsersBackground);   }
+            $(`<div class='imgEffects'><img src="` + "./ImageEffects/001Frame.png" + `"></div>`).appendTo(RahmenHintermBackground);   }
        
               if (InputValuesArray.at(7) && InputValuesArray.at(7) == "002Frame") {
-            $(`<div class='imgEffects'><img src="` + "./ImageEffects/002Frame.png" + `"></div>`).appendTo(UsersBackground);   }
+            $(`<div class='imgEffects'><img src="` + "./ImageEffects/002Frame.png" + `"></div>`).appendTo(RahmenHintermBackground);   }
        
-              if (InputValuesArray.at(8) && InputValuesArray.at(8) == "003Frame") {
-            $(`<div class='imgEffects'><img src="` + "./ImageEffects/003Frame.png" + `"></div>`).appendTo(UsersBackground);   }
+              if (InputValuesArray.at(8) && InputValuesArray.at(8) == "004Frame") {
+            $(`<div class='imgEffects'><img src="` + "./ImageEffects/004Frame.png" + `"></div>`).appendTo(RahmenHintermBackground);   }
        
       
       //     console.log(uploadedImgParsed.replace(beforeReplace,afterReplace));

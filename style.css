@@ -1,10 +1,10 @@
 body {
   font-family: monospace;
-  font-size: 18px;
+  font-size: 22px;
   text-decoration: none;
   line-height: 1.4;
-  color: var(--textcolor);
-  background-color: hotpink;
+  /*color: var(--textcolor);*/  
+  background-color: #f672b4;
  /* background: var(--bgcolor);*/
   position: relative;
   max-width: 64em;  /* remove this for a full-width layout */
@@ -14,15 +14,17 @@ body {
 /*styling Titel Heidi */
 .heidi{
   font-size: 70px;
-  outline-color: #e8ff66;
+  color: #b100ff;
+  outline-color: #b100ff;
   outline-style: dotted;
   outline-width: 6px;
   outline-offset: -4px;
   width: fit-content;
   
-  background-color: #e8ff66
-  
-}
+  background-color: #ff00a7
+ 
+}  
+
 /* ------- Gallery Darstellung ------- */
 #people{
   width: auto;
@@ -53,26 +55,18 @@ body {
   overflow: hidden; 
   
   
-  background-color: #e8ff66;
+  /*----background-color: #e8ff66;
 outline-color: #e8ff66;
   outline-style: dotted;
   outline-width: 6px;
-  outline-offset: -4px;
+  outline-offset: -4px; */
 }
 
-.bilderrahmen {
-  position:absolute;
-  width: 250px;
-  height: 250px;
-  transform: translate(0, 30%);
-   z-index: -3; /* Make sure it’s on top */
-}
-
-
+/* ------- Bilder in der Gallery Darstellung ------- */
 .img {
   position: relative;
-  margin: 20px;
-    z-index: 3; /* Make sure it’s on top */
+  margin: 39px;
+    z-index: 0 ; /* Make sure it’s on top */
   padding-bottom: 5%;
 }
 
@@ -81,19 +75,41 @@ outline-color: #e8ff66;
   width: 200px;
   height: 200px;
   object-fit: cover;
-  z-index: 5; /* Make sure it’s on top */
+
 }
 
+/* ------- Bilderrahmen ist dahinter Darstellung ------- */
+.bilderrahmen {
+  position:absolute;
+  width: 300px;
+  height: 300px;
+  transform: translate(0, 30%);
+   z-index: -2; /* Make sure it’s on top */
+    outline-style: dotted;
+  outline-width: 6px;
+  outline-offset: -4px;
+}
+
+/* ------- Bilderrahmen VOR dem Bild Darstellung ------- */
+.ImageEffectsContainter {
+  position:absolute;
+  width: 300px;
+  height: 300px;
+  transform: translate(0, 30%);
+   z-index: 10; /* Make sure it’s on top */
+}
 .imgEffects {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+ top: 50%; left: 50%; transform: translate(-50%, -50%);
   pointer-events: none;
   display: block; /* Ensure it displays as a block-level element */
-  z-index: 10; /* Make sure it’s on top */
+  z-index:  -10; /* Make sure it’s on top */
+  
+  image-rendering: pixelated;
+  
 }
+
+
 
 
 
