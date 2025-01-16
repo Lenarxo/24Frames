@@ -19,51 +19,43 @@
   
   
   <body>
-    <header>
-    
-      <nav>
-        <a href="editor.html">Editor</a>  
-        <a href="index.html">Gallery</a>
-      </nav>
-    </header>
-    
-    
-    <main>
+    <div class="upper">
+  
       <div class="heidi">
         <a href="index.html">Framed Nostalgia</a>  
-      </div> 
-
-    <h2 id="Numbersgoer">hallo hallo hallo. such dir einen süßen Frame aus und pack dein Bild hinein :).</h2>
+      </div>
+       <p> hallo, ich hoffe, du magst es, deine Bilder zu verziehren! see you and your pics around.</p>         
+       <nav>
+        <a href="editor.html">Editor</a>
+        <a href="index.html">Gallery</a>
+      </nav>
+   </div>
     
-   <div id="inputer">
+
+    
+
+   <!-- have it in the middle >-->
+  
+           
+
+   <div id="inputer" class="inputerclass">
    <form action="copier"> 
      
-     
-     
-     
-     
-        <input type="text" placeholder="Your Name" id="YourName">
-        <br>
-        <input type="text" placeholder="What are we looking at?" id="HeaderName">      
-        <br>
-        <input type="color" id="Color" value="#1E90FF" onchange=ChangeEditorOnce() style="min-height: 43px">
-      <br>
-        <label for="background-image">your image URL:</label>
-        <input type="url" id="Bg-Image" placeholder="https://your-image.de">
-     
+             <input type="text" placeholder="Your Name" id="YourName">
 
-       
-  <div class="checkbox-container">
-    <input type="checkbox" id="GreenDot" name="GreenDot" />
-      <label for="GreenDot">GreenDot</label>    
-  </div>
-     
-  <div class="checkbox-container">
-      <input type="checkbox" id="horns" name="horns" />
-      <label for="horns">bluedot</label>
-  </div>
+        <input type="text" placeholder="What are we looking at?" id="HeaderName">     
+                <br>
+                 <input type="color" id="farbe" value="#1E90FF" onchange=ChangeEditorOnce() style="min-height: 43px">
+        <br>
+        <label for="background-image">your image URL:</label>
+
+        <input type="url" id="Bg-Image" placeholder="https://your-image.de"> 
+     <br>
      
      
+     
+     
+   <div class="tabelle">  
 
  <div class="checkbox-container">
       <input type="checkbox" id="004Frame" class="likeradio" unchecked/>
@@ -82,7 +74,8 @@
      <div class="checkbox-container">
       <input type="checkbox" id="007Frame"  class="likeradio"/>
 <label for="007Frame"><img src="./ImageEffects/007Frame.png" width="100"></label>
-  </div>  
+  </div>         </div>
+
 </form>
 
      
@@ -97,7 +90,7 @@
      
 <!-- The button used to copy the text -->
 
-<button onclick="CopyEachOne()">Copy text and change stuff</button> <br>
+<button onclick="CopyEachOne()">Copy text</button> <br>
 
   <!--Send it Over -->   
 <form action="https://docs.google.com/forms/d/e/1FAIpQLSeIePQe2RlzDWoSGJ9k7rjwft-QQkpKY2_qSFwnrNCorADV7w/viewform" target="_blank">
@@ -105,7 +98,7 @@
   
 </form>
     </div>
-    </main>
+
     
     
     
