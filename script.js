@@ -35,7 +35,7 @@ $(document).ready(function () {
     
     
      // go over everything in data we get and run the code below to add one Tabellenzeile at a time to the html
-    data.forEach(function (entry, index) { //forEach is a loop that runs over everything in the data we got above
+    data.forEach(function (entry) { //forEach is a loop that runs over everything in the data we got above
        var InputValuesArray = entry.LongString.split("Ω"); // Input Values is a array to easily work with the long text string we get out of the editor. We are spliting it at the OMEGA Unicode Charater
 
       // the number of the InputValuesArray and what it refers to can be seen in the editor. Its the array "arrayInputs" it starts with 0
@@ -43,7 +43,7 @@ $(document).ready(function () {
      console.log(entry); // Debug console log
    
            let myFrames = $(`<div class='p'}>
-              <h2 class="name">` + index + " - " +
+              <h2 class="name">` +
               ` <span class='Kunstwerk'>` + InputValuesArray.at(0) + `  
               </div>`).appendTo("#people");  //all these lines gets the InputValues from the Array at the position definied in the editor and adds it into html with backticks
       
@@ -89,16 +89,17 @@ $(document).ready(function () {
       
             
       
-        if (InputValuesArray.at(6) && InputValuesArray.at(6) == "001Frame") {
-            $(`<div class='imgEffects'><img src="` + "./ImageEffects/001Frame.png" + `"></div>`).appendTo(RahmenHintermBackground);   }
-       
-              if (InputValuesArray.at(7) && InputValuesArray.at(7) == "002Frame") {
-            $(`<div class='imgEffects'><img src="` + "./ImageEffects/002Frame.png" + `"></div>`).appendTo(RahmenHintermBackground);   }
-       
-              if (InputValuesArray.at(8) && InputValuesArray.at(8) == "004Frame") {
+        if (InputValuesArray.at(6) && InputValuesArray.at(6) == "004Frame") {
             $(`<div class='imgEffects'><img src="` + "./ImageEffects/004Frame.png" + `"></div>`).appendTo(RahmenHintermBackground);   }
        
-      
+              if (InputValuesArray.at(7) && InputValuesArray.at(7) == "005Frame") {
+            $(`<div class='imgEffects'><img src="` + "./ImageEffects/005Frame.png" + `"></div>`).appendTo(RahmenHintermBackground);   }
+       
+              if (InputValuesArray.at(8) && InputValuesArray.at(8) == "006Frame") {
+            $(`<div class='imgEffects'><img src="` + "./ImageEffects/006Frame.png" + `"></div>`).appendTo(RahmenHintermBackground);   }
+       
+                    if (InputValuesArray.at(8) && InputValuesArray.at(8) == "007Frame") {
+            $(`<div class='imgEffects'><img src="` + "./ImageEffects/007Frame.png" + `"></div>`).appendTo(RahmenHintermBackground);   }
       //     console.log(uploadedImgParsed.replace(beforeReplace,afterReplace));
     }); // the end of data forEach our function
     
