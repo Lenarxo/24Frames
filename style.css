@@ -4,11 +4,21 @@ body {
   text-decoration: none;
   line-height: 1.4;
   /*color: var(--textcolor);*/  
-  background-color: #f672b4;
+  background-color: #FF97DB;
  /* background: var(--bgcolor);*/
   position: relative;
-  max-width: 64em;  /* remove this for a full-width layout */
+  max-width: 100%;  /* remove this for a full-width layout */
   margin: 0 auto;  /* centers the layout */
+}
+/* ------- Header ------- */
+a {
+  text-decoration: none;
+  color: black;
+}
+header {
+height: 3%;
+  background-color: #3F0097;
+ 
 }
 
 /*styling Titel Heidi */
@@ -22,8 +32,23 @@ body {
   width: fit-content;
   
   background-color: #ff00a7
+}     
+
+
+nav { 
+    background-color: #ff00a7;
+    display: flex;
+  z-index: 66;
+font-size: 1em}    
+    
+    
+    .upper{
+      display: grid;
+      grid-template-rows: 200px;
+      grid-template-columns: 30% 40% 30%;
+  }
  
-}  
+ 
 
 /* ------- Gallery Darstellung ------- */
 #people{
@@ -65,7 +90,7 @@ outline-color: #e8ff66;
 /* ------- Bilder in der Gallery Darstellung ------- */
 .img {
   position: relative;
-  margin: 39px;
+  margin: 50px;
     z-index: 0 ; /* Make sure it’s on top */
   padding-bottom: 5%;
 }
@@ -163,21 +188,4 @@ form {
 
 
 
-/* ------- Header ------- */
-a {
-  text-decoration: none;
-  color: black;
-}
-header {
-  padding: 1vw 1vw 1vw 1vw;
-  background-color: #e158ba;
-}
 
-
-nav { 
-    display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  width: auto;
-  z-index: 66;
-font-size: 1em}
