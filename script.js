@@ -24,6 +24,14 @@ https://docs.google.com/spreadsheets/d/1gLyh6gv41vl9H1fBmjFrGfKip9dKkvIu6o8sccTw
    Link to the example spreadsheet: https://docs.google.com/spreadsheets/d/1ndp1b_EgDONxhSEa9rd6N80Y_oEvI57cNbqO9EMUIGQ/edit#gid=0
 */
 
+/*--- titelseite----*/
+window.addEventListener('scroll', () => {
+    const body = document.body;
+    body.classList.toggle('scrolling', window.scrollY > 0);
+});
+
+
+
 
 $(document).ready(function () {
   
