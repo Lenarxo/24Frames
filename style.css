@@ -1,6 +1,5 @@
 body {
-  font-family: monospace;
-  font-size: 22px;
+  font-family: Dejavu Sans Mono;
   text-decoration: none;
   line-height: 1.4;
   /*color: var(--textcolor);*/  
@@ -25,6 +24,8 @@ body, html {
 }
 
 .titel {
+    font-size: 95;
+  color: #000;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -90,7 +91,7 @@ height: 3%;
 
 /*styling Titel Heidi */
 .heidi{
-  font-size: 70px;
+  font-size: 65px;
   color: #b100ff;
   outline-color: #b100ff;
   outline-style: dotted;
