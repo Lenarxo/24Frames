@@ -24,33 +24,95 @@ body, html {
 }
 
 .titel {
-    font-size: 95;
-  color: #000;
+    font-size: 119px;
+    position: relative; /* Sicherstellen, dass z-index-Bedingungen greifen */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
+}
+
+.background {
+    position: absolute; /* Raster als Hintergrund */
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
     background-color: #f5f5f5;
     background-image: linear-gradient(to right, #000 0.5px, transparent 0.5px), linear-gradient(to bottom, #000 0.5px, transparent 0.5px);
     background-size: 200px 200px;
-    transition: background-color 2s ease, background-image 2s ease; /* Transition for both background color and image */
+    z-index: 1; /* Raster im Hintergrund */
+  transition: background-color 3s ease, background-image 3s ease;
 }
 
-.content {
-    padding: 40px;
-    background-color: #fff;
-}
 
-h1, h2 {
+h1 {
+    position: relative; /* Sicherstellen, dass z-index-Bedingungen greifen */
+    z-index: 3; /* Titel im Vordergrund */
     margin: 0;
 }
 
-body.scrolling .titel {
-    background-color: #ff69b4; /* Pink color */
-    background-image: linear-gradient(to right, #ff69b4 0.5px, transparent 0.5px), linear-gradient(to bottom, #ff69b4 0.5px, transparent 0.5px); /* Pink grid */
+.form1 {
+    position: absolute;
+    top: 13%;
+    right: 25%;
+    background-color: #86ff00;
+    width: 500px;
+    height: 500px;
+    z-index: 2; /* Form zwischen Titel und Hintergrund */
+    transition: opacity 3s ease;
+}
+body.scrolling .form1 { 
+  opacity: 0; /* Fade out form */ 
+}
+.form2 {
+    position: absolute;
+    top: 55%;
+    right: 65%;
+    background-color: #3d00ff;
+    width: 500px;
+    height: 500px;
+    z-index: 2; /* Form zwischen Titel und Hintergrund */
+    transition: opacity 3s ease;
+}
+body.scrolling .form2 { 
+  opacity: 0; /* Fade out form */ 
+}
+.form3 {
+    position: absolute;
+    top: 52%;
+    right: 75%;
+    width: 90px;
+    height: 500px;
+    z-index: 2; /* Form zwischen Titel und Hintergrund */
+    transition: opacity 3s ease;
+   image-rendering: smooth;
+  rotate: -5deg
+}
+body.scrolling .form3 { 
+  opacity: 0; /* Fade out form */ 
+}
+.form4 {
+  font-family: Hobo Std;
+  font-size: 36px;
+    position: absolute;
+    top: 75%;
+    right: 56%;
+    width: 292px;
+    height: 500px;
+    z-index: 2; /* Form zwischen Titel und Hintergrund */
+    transition: opacity 3s ease;
+  rotate: 20deg
+}
+body.scrolling .form4 { 
+  opacity: 0; /* Fade out form */ 
 }
 
+body.scrolling .background {  /* Farbwechsel-Effekt beim Scrollen auf background anwenden */
+    background-color: #ff69b4; /* Pink Farbe */
+    background-image: linear-gradient(to right, #ff69b4 0.5px, transparent 0.5px), linear-gradient(to bottom, #ff69b4 0.5px, transparent 0.5px); /* Pink Raster */
+}
 
 
 /* ------- IMG Vorschau ------- */
