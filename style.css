@@ -95,9 +95,9 @@ body.scrolling .form3 {
 }
 .form4 {
   font-family: Hobo Std;
-  font-size: 36px;
+  font-size: 66px;
     position: absolute;
-    top: 75%;
+    top: 73%;
     right: 56%;
     width: 292px;
     height: 500px;
@@ -113,7 +113,21 @@ body.scrolling .background {  /* Farbwechsel-Effekt beim Scrollen auf background
     background-color: #ff69b4; /* Pink Farbe */
     background-image: linear-gradient(to right, #ff69b4 0.5px, transparent 0.5px), linear-gradient(to bottom, #ff69b4 0.5px, transparent 0.5px); /* Pink Raster */
 }
-
+.form5 {
+    font-family: Hobo Std;
+  font-size: 42px;
+    position: absolute;
+    top: 14%;
+    right: 24%;
+   
+    width: 500px;
+    height: 500px;
+    z-index: 2; /* Form zwischen Titel und Hintergrund */
+    transition: opacity 3s ease;
+}
+body.scrolling .form5 { 
+  opacity: 0; /* Fade out form */ 
+}
 
 /* ------- IMG Vorschau ------- */
 
