@@ -52,11 +52,15 @@ h1 {
     z-index: 3; /* Titel im Vordergrund */
     margin: 0;
 }
+/*---- hier fangen die ganzen formen an----*/
+
+.container { position: relative; height: 100vh; /* Container füllt die gesamte Höhe des Viewports */
+}
 
 .form1 {
     position: absolute;
     top: 13%;
-    right: 25%;
+    right: 21%;
     background-color: #86ff00;
     width: 500px;
     height: 500px;
@@ -66,13 +70,19 @@ h1 {
 body.scrolling .form1 { 
   opacity: 0; /* Fade out form */ 
 }
+@media screen and (max-width: 1024px) 
+{ .form1 { top: 10%; /* Passe nach Bedarf an */ 
+  right: 15%; /* Passe nach Bedarf an */ 
+  width: 400px; /* Passe nach Bedarf an */ 
+  height: 400px; /* Passe nach Bedarf an */ } }
+
 .form2 {
     position: absolute;
-    top: 55%;
-    right: 65%;
+    top: 54%;
+    right: 67%;
     background-color: #3d00ff;
-    width: 500px;
-    height: 500px;
+    width: 400px;
+    height: 400px;
     z-index: 2; /* Form zwischen Titel und Hintergrund */
     transition: opacity 3s ease;
 }
@@ -96,9 +106,10 @@ body.scrolling .form3 {
 .form4 {
   font-family: Hobo Std;
   font-size: 66px;
+  line-height: 67px;
     position: absolute;
-    top: 73%;
-    right: 56%;
+    top: 59%;
+    right: -499%;
     width: 292px;
     height: 500px;
     z-index: 2; /* Form zwischen Titel und Hintergrund */
@@ -117,8 +128,8 @@ body.scrolling .background {  /* Farbwechsel-Effekt beim Scrollen auf background
     font-family: Hobo Std;
   font-size: 42px;
     position: absolute;
-    top: 14%;
-    right: 24%;
+    top: 3%;
+    right: -6%;
    
     width: 500px;
     height: 500px;
@@ -128,13 +139,72 @@ body.scrolling .background {  /* Farbwechsel-Effekt beim Scrollen auf background
 body.scrolling .form5 { 
   opacity: 0; /* Fade out form */ 
 }
+.form6 {
+    font-family: Hobo Std;
+  font-size: 42px;
+    position: absolute;
+    top: 18%;
+    right: 5%;
+    rotate: 90deg;
+    width: 500px;
+    height: 500px;
+    z-index: 2; /* Form zwischen Titel und Hintergrund */
+    transition: opacity 3s ease;
+}
+body.scrolling .form6 { 
+  opacity: 0; /* Fade out form */ 
+}
+.form7 {
+    font-family: Dejavu Sans Mono;
+  font-size: 19px;
+  line-height: 23px;
+    position: absolute;
+    top: 24%;
+    right: 21%;
+
+    width: 302px;
+    height: 500px;
+    z-index: 2; /* Form zwischen Titel und Hintergrund */
+    transition: opacity 3s ease;
+}
+.form8 {
+    position: absolute;
+    top: -20%;
+    right: 98%;
+    width: 29px;
+    height: 500px;
+    z-index: 2; /* Form zwischen Titel und Hintergrund */
+    transition: opacity 3s ease;
+   image-rendering: smooth;
+  rotate: 22deg
+}
+body.scrolling .form8 { 
+  opacity: 0; /* Fade out form */ 
+}
+.dot {
+  height: 700;
+  width: 700;
+      position: absolute;
+    top: -12%;
+    right: 37%;
+  background-color: #ff0000;
+  border-radius: 50%;
+  display: inline-block;
+  transition: opacity 3s ease;
+  z-index: 1;
+}
+  
+ body.scrolling .dot { 
+  opacity: 0; /* Fade out form */ 
+} 
 
 /* ------- IMG Vorschau ------- */
 
 .imgvorschau1 { width: 100%; 
   background-image: url("./ImageEffects/004Frame.png");
   background-repeat: repeat; 
-  height: 50px; /* Adjust height as needed */ }
+  height: 50px; /* Adjust height as needed */ 
+}
 
 .imgvorschau2 { width: 100%; 
   background-image: url("./ImageEffects/005Frame.png");
@@ -157,7 +227,7 @@ body.scrolling .form5 {
 /* ------- Header ------- */
 a {
   text-decoration: none;
-  color: black;
+  color: #fffc00;
 }
 header {
 height: 3%;
@@ -165,33 +235,47 @@ height: 3%;
  
 }
 
-/*styling Titel Heidi */
+/*styling upper, Heidi usw */   
+.upper{
+
+      display: flex;
+  justify-content: space-between;
+  background-color: #ff00a7;
+      z-index: 2;
+  }
+ 
 .heidi{
   font-size: 65px;
-  color: #b100ff;
-  outline-color: #b100ff;
-  outline-style: dotted;
-  outline-width: 6px;
-  outline-offset: -4px;
+  color: #fffc00;
   width: fit-content;
-  
-  background-color: #ff00a7
+  z-index: 3;
 }     
+.heidi02{
+  font-size: 29px;
+  color: #fffc00;
+  width: 500px;
+  z-index: 3;
+} 
+.heidi03{
+  font-size: 65px;
+  color: #fffc00;
+  width: fit-content;
+  z-index: 3;
+} 
 
 
 nav { 
     background-color: #ff00a7;
+  height: 100px;
     display: flex;
   z-index: 66;
-font-size: 1em}    
+font-size: 1em;
+
+}   
+
     
     
-    .upper{
-      display: grid;
-      grid-template-rows: 100%;
-      grid-template-columns: 30% 40% 30%;
-  }
- 
+
  
 
 /* ------- Gallery Darstellung ------- */
