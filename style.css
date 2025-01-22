@@ -1,8 +1,10 @@
 @font-face{
-  font-family: "Dejavu Sans Mono";
-  src: url(./fonts/DejaVuSansMono.ttf) format("truetype");
     font-family: "Hobo Std";
   src: url(./fonts/hobostd.otf) format("opentype");
+}
+@font-face{
+  font-family: "Dejavu Sans Mono";
+  src: url(./fonts/DejaVuSansMono.ttf) format("truetype");
 }
 
 body {
