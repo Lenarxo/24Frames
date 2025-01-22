@@ -1,5 +1,12 @@
+@font-face{
+  font-family: "Dejavu Sans Mono";
+  src: url(./fonts/DejaVuSansMono.ttf) format("truetype");
+    font-family: "Hobo Std";
+  src: url(./fonts/hobostd.otf) format("opentype");
+}
+
 body {
-  font-family: Dejavu Sans Mono;
+  font-family: Dejavu Sans Mono; 
   text-decoration: none;
   line-height: 1.4;
   /*color: var(--textcolor);*/  
