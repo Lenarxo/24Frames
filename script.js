@@ -50,11 +50,21 @@ $(document).ready(function () {
        // Erklärung für Backticks also hinzufügung https://www.shecodes.io/athena/315298-how-to-use-backtick-in-javascript
      console.log(entry); // Debug console log
    
-           let myFrames = $(`<div class='p'}>
-              <h2 class="name">` +
-              ` <span class='Kunstwerk'>` + InputValuesArray.at(0) + `  
-              </div>`).appendTo("#people");  //all these lines gets the InputValues from the Array at the position definied in the editor and adds it into html with backticks
+          // let myFrames = $(`<div class='p'}>
+            //  <h2 class="name">` +
+              //` <span class='Kunstwerk'>` + InputValuesArray.at(0) + " " + InputValuesArray.at(3) + `  
+              //</div>`).appendTo("#people");  //all these lines gets the InputValues from the Array at the position definied in the editor and adds it into html with backticks
+
       
+      let myFrames = $(`
+  <div class='p'>
+    <h2 class="name">
+      <span class='kunstwerk-left'>` + InputValuesArray.at(0) + `</span>
+      <span class='kunstwerk-right'>` + InputValuesArray.at(3) + `</span>
+    </h2>
+  </div>
+`).appendTo("#people");
+
 
           var UsersBackground;
 

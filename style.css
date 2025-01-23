@@ -334,9 +334,9 @@ outline-color: #e8ff66;
 /* ------- Bilder in der Gallery Darstellung ------- */
 .img {
   position: relative;
-  margin-top: 150px;
+  margin-top: 100px;
     z-index: 0 ; /* Make sure it’s on top */
-  padding-bottom: 5%;
+  padding-bottom: 29%;
 }
 
 .img img {
@@ -392,14 +392,31 @@ outline-color: #e8ff66;
 
 
 
-.Kunstwerk {
-   font-size: 11px;
+.p {
+  display: flex;
+  align-items: center;
+  position: relative;
 }
 
 .name {
-  position: absolute;
-  transform: translate(-69px, 301px);
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.kunstwerk-left{  font-size: 11px;
+  flex: 1;
+  margin: 0 5px; /* Optional: fügt Abstand zwischen den Spalten hinzu */
   background-color: #d2d8ff;
+
+}
+
+.kunstwerk-right {
+  font-size: 11px;
+  flex: 1;
+  margin: 0 5px; /* Optional: fügt Abstand zwischen den Spalten hinzu */
+  background-color: #d2d8ff;
+text-align: right;
 }
 
 
