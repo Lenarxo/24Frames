@@ -111,43 +111,39 @@ $(".likeradio").change(function()
 });
       
       
-  function CopyEachOne() {
-    ChangeEditorOnce();
-var AllText ="";    
-const arrayInputs = [ //here the IDS of the inputs which are used for the clipboard
-    "YourName",
-    "Color",
-    "Bg-Image",
-    "HeaderName",
-    "horns",
-    "GreenDot",
-"004Frame",
- "005Frame",
-  "006Frame",
-   "007Frame",
-    
-];
-    
-    // sends stuff to the clipboard
-//arrayInputs.forEach(function(Inputs) {
-       arrayInputs.forEach(function (inputId) {
-  const inputElem = document.getElementById(inputId);
-         
-      let InputWert = "";
-           
-          if (inputElem.type === "checkbox") {
-            InputWert = inputElem.checked ? inputElem.id : ""; // Use id if checked, empty if not
-          } else {
-            InputWert = inputElem.value;
-          }
-  
-  
-  //  var copyTrenner = document.getElementById(Inputs).value + "Ω"; //trenn von Inputs
-    AllText += InputWert + "Ω";//copyTrenner ; //append to existing
- console.log("These are your inputs right now:"+AllText);
+ function CopyEachOne() {
+    var AllText = "";
+    const arrayInputs = [
+        "YourName",
+        "farbe", // wurde von "Color" auf "farbe" geändert
+        "Bg-Image",
+        "HeaderName",
+        "004Frame",
+        "005Frame",
+        "006Frame",
+        "007Frame",
+    ];
+
+    arrayInputs.forEach(function (inputId) {
+        const inputElem = document.getElementById(inputId);
+
+        if (inputElem) {
+            let InputWert = "";
+
+            if (inputElem.type === "checkbox") {
+                InputWert = inputElem.checked ? inputElem.id : ""; // Use id if checked, empty if not
+            } else {
+                InputWert = inputElem.value;
+            }
+
+            AllText += InputWert + "Ω";
+        }
+    });
+
+    console.log("Dies sind Ihre aktuellen Eingaben:"+AllText);
     navigator.clipboard.writeText(AllText);
-}); 
 }
+
 
 
 //changes Site
