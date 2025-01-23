@@ -25,11 +25,20 @@ body {
 
 
 /* ----titelseite---- */
+
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
     scroll-behavior: smooth;
+}
+
+.titel-frame {
+    position: -webkit-sticky; /* for Safari */
+    position: sticky;
+    top: 0;
+  background-color: white;
+  z-index: 9;
 }
 
 .titel {
@@ -76,9 +85,7 @@ h1 {
     z-index: 2; /* Form zwischen Titel und Hintergrund */
     transition: opacity 3s ease;
 }
-body.scrolling .form1 { 
-  opacity: 0; /* Fade out form */ 
-}
+
 @media screen and (max-width: 1024px) 
 { .form1 { top: 10%; /* Passe nach Bedarf an */ 
   right: 15%; /* Passe nach Bedarf an */ 
@@ -95,9 +102,7 @@ body.scrolling .form1 {
     z-index: 2; /* Form zwischen Titel und Hintergrund */
     transition: opacity 3s ease;
 }
-body.scrolling .form2 { 
-  opacity: 0; /* Fade out form */ 
-}
+
 .form3 {
     position: absolute;
     top: 52%;
@@ -109,9 +114,7 @@ body.scrolling .form2 {
    image-rendering: smooth;
   rotate: -5deg
 }
-body.scrolling .form3 { 
-  opacity: 0; /* Fade out form */ 
-}
+
 .form4 {
   font-family: Hobo Std;
   font-size: 66px;
@@ -125,14 +128,7 @@ body.scrolling .form3 {
     transition: opacity 3s ease;
   rotate: 20deg
 }
-body.scrolling .form4 { 
-  opacity: 0; /* Fade out form */ 
-}
 
-body.scrolling .background {  /* Farbwechsel-Effekt beim Scrollen auf background anwenden */
-    background-color: #ff69b4; /* Pink Farbe */
-    background-image: linear-gradient(to right, #ff69b4 0.5px, transparent 0.5px), linear-gradient(to bottom, #ff69b4 0.5px, transparent 0.5px); /* Pink Raster */
-}
 .form5 {
     font-family: Hobo Std;
   font-size: 42px;
@@ -145,9 +141,7 @@ body.scrolling .background {  /* Farbwechsel-Effekt beim Scrollen auf background
     z-index: 2; /* Form zwischen Titel und Hintergrund */
     transition: opacity 3s ease;
 }
-body.scrolling .form5 { 
-  opacity: 0; /* Fade out form */ 
-}
+
 .form6 {
     font-family: Hobo Std;
   font-size: 42px;
@@ -160,9 +154,7 @@ body.scrolling .form5 {
     z-index: 2; /* Form zwischen Titel und Hintergrund */
     transition: opacity 3s ease;
 }
-body.scrolling .form6 { 
-  opacity: 0; /* Fade out form */ 
-}
+
 .form7 {
     font-family: Dejavu Sans Mono;
   font-size: 19px;
@@ -187,9 +179,7 @@ body.scrolling .form6 {
    image-rendering: smooth;
   rotate: 22deg
 }
-body.scrolling .form8 { 
-  opacity: 0; /* Fade out form */ 
-}
+
 .dot {
   height: 700;
   width: 700;
@@ -202,11 +192,22 @@ body.scrolling .form8 {
   transition: opacity 3s ease;
   z-index: 1;
 }
-  
- body.scrolling .dot { 
-  opacity: 0; /* Fade out form */ 
-} 
 
+body.scrolling .background {  /* Farbwechsel-Effekt beim Scrollen auf background anwenden */
+    background-color: #ff69b4; /* Pink Farbe */
+    background-image: linear-gradient(to right, #ff69b4 0.5px, transparent 0.5px), 
+      linear-gradient(to bottom, #ff69b4 0.5px, transparent 0.5px); /* Pink Raster */
+}
+body.scrolling .dot,
+body.scrolling .form1,
+body.scrolling .form2,
+body.scrolling .form3,
+body.scrolling .form4,
+body.scrolling .form5,
+body.scrolling .form6,
+body.scrolling .form8 {
+    opacity: 0; /* Fade out forms on scroll */
+ }
 /* ------- IMG Vorschau ------- */
 
 .imgvorschau1 { width: 100%; 
@@ -214,7 +215,6 @@ body.scrolling .form8 {
   background-repeat: repeat; 
   height: 50px; /* Adjust height as needed */ 
 }
-
 .imgvorschau2 { width: 100%; 
   background-image: url("./ImageEffects/005Frame.png");
   background-repeat: repeat; 
@@ -245,9 +245,15 @@ height: 3%;
 }
 
 /*styling upper, Heidi usw */   
-.upper{
+.upper-frame{
+  position: -webkit-sticky; /* for Safari */
+    position: sticky;
+    top: 0;
+  z-index: 10
+}
 
-      display: flex;
+.upper{
+display: flex;
   justify-content: space-between;
   background-color: #ff00a7;
       z-index: 2;
@@ -277,8 +283,9 @@ nav {
     background-color: #ff00a7;
   height: 100px;
     display: flex;
-  z-index: 66;
-font-size: 1em;
+  justify-content: center;
+  z-index: 3;
+font-size: 65px;
 
 }   
 
