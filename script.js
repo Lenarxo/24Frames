@@ -56,14 +56,31 @@ $(document).ready(function () {
               //</div>`).appendTo("#people");  //all these lines gets the InputValues from the Array at the position definied in the editor and adds it into html with backticks
 
       
-      let myFrames = $(`
-  <div class='p'>
-    <h2 class="name">
-      <span class='kunstwerk-left'>` + InputValuesArray.at(0) + `</span>
-      <span class='kunstwerk-right'>` + InputValuesArray.at(3) + `</span>
-    </h2>
-  </div>
-`).appendTo("#people");
+    // Datum aus InputValuesArray[8] formatieren
+  let dateContent = "";
+    if (InputValuesArray[8]) {
+        const date = new Date(InputValuesArray[8]);
+        const day = date.getDate().toString().padStart(2, '0');
+        const month = (date.getMonth() + 1).toString().padStart(2, '0');
+        const year = date.getFullYear().toString().slice(-2); // Letzte zwei Zahlen vom Jahr
+        dateContent = `
+            <span class="day">${day}</span>
+            <span class="month">${month}</span>
+            <span class="year">${year}</span>`;
+    }
+  
+    // Erstellen der Elemente
+    let myFrames = $(`
+        <div class='p'>
+            <h2 class="name">
+                ${dateContent ? `<span class='kunstwerk-up'>${dateContent}</span>` : ''}
+                <span class='kunstwerk-left'>` + InputValuesArray[0] + `</span>
+                <span class='kunstwerk-right'>` + InputValuesArray[3] + `</span>
+            </h2>
+        </div>
+        `).appendTo("#people");
+      //für das datum
+      
 
 
           var UsersBackground;

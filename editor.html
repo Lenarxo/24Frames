@@ -41,15 +41,22 @@
    <div id="inputer" class="inputerclass">
    <form action="copier"> 
      
-             <input type="text" placeholder="Your Name" id="YourName">
+               <input type="text" placeholder="Your Name" id="YourName">
 
-        <input type="text" placeholder="Name of your Nostalgia" id="HeaderName">     
+                <input type="text" placeholder="Name of your Nostalgia" id="HeaderName">  
+               
+                <input type="date" id="date">
+                
+  
+               
+                <label for="background-image">your image URL:</label>    
+                     <input type="url" id="Bg-Image" placeholder="https://your-image.de"> 
                 <br>
                  <input type="color" id="farbe" value="#1E90FF" onchange=ChangeEditorOnce() style="min-height: 43px">
         <br>
-        <label for="background-image">your image URL:</label>
+      
 
-        <input type="url" id="Bg-Image" placeholder="https://your-image.de"> 
+   
      <br>
      
      
@@ -122,6 +129,7 @@ $(".likeradio").change(function()
         "005Frame",
         "006Frame",
         "007Frame",
+        "date",
     ];
 
     arrayInputs.forEach(function (inputId) {
