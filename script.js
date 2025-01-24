@@ -101,11 +101,15 @@ $(document).ready(function () {
     
 
             // damit es nicht auch mit drin ist sondern dahinter 
-       var RahmenHintermBackground;
-      if (InputValuesArray.at(1) && UsersBackground ) {
-      RahmenHintermBackground = $(`<div class='bilderrahmen' style=background-color:${InputValuesArray.at(1)}></div>`).appendTo(myFrames);   }
-    //  `<div class='p' style=background-color:${InputValuesArray.at(1)}>
+ //  `<div class='p' style=background-color:${InputValuesArray.at(1)}>
 
+      var RahmenHintermBackground;
+if (InputValuesArray.at(1) && UsersBackground) {
+    RahmenHintermBackground = $(`<div class='bilderrahmen' style="background-color: ${InputValuesArray.at(1)}; outline: 5px solid ${InputValuesArray.at(1)};"></div>`).appendTo(myFrames);
+}
+
+      
+      
              var RahmenHintermBackground02;
       if (InputValuesArray.at(1) && UsersBackground ) {
       RahmenHintermBackground = $(`<div class='bilderrahmen02' style=background-color:${InputValuesArray.at(1)}></div>`).appendTo(myFrames);   }
