@@ -334,7 +334,7 @@ outline-color: #e8ff66;
 /* ------- Bilder in der Gallery Darstellung ------- */
 .img {
   position: relative;
-  margin-top: 87px;
+  margin-top: 95px;
     z-index: 0 ; /* Make sure it’s on top */
   padding-bottom: 8%;
 }
@@ -398,6 +398,7 @@ outline-color: #e8ff66;
   justify-content: space-between;
   flex-wrap: wrap;
   width: 180px;
+  z-index: 50;
 }
 
 .kunstwerk-up {
@@ -405,8 +406,8 @@ outline-color: #e8ff66;
   justify-content: space-between;
   font-size: 10px;
   transform: translate(0, 117px);
-  margin: 0 5px;
- 
+  margin: 0 5;
+ background-color: #1b7fd6;
   width: 170px;
 }
 

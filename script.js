@@ -57,17 +57,14 @@ $(document).ready(function () {
 
       
     // Datum aus InputValuesArray[8] formatieren
-  let dateContent = "";
-    if (InputValuesArray[8]) {
-        const date = new Date(InputValuesArray[8]);
-        const day = date.getDate().toString().padStart(2, '0');
-        const month = (date.getMonth() + 1).toString().padStart(2, '0');
-        const year = date.getFullYear().toString().slice(-2); // Letzte zwei Zahlen vom Jahr
-        dateContent = `
-            <span class="day">${day}</span>
-            <span class="month">${month}</span>
-            <span class="year">${year}</span>`;
-    }
+   const date = InputValuesArray[8] ? new Date(InputValuesArray[8]) : new Date();
+    const day = date.getDate().toString().padStart(2, '0');
+    const month = (date.getMonth() + 1).toString().padStart(2, '0');
+    const year = date.getFullYear().toString().slice(-2); // Letzte zwei Zahlen vom Jahr
+    const dateContent = `
+        <span class="day">${day}</span>
+        <span class="month">${month}</span>
+        <span class="year">${year}</span>`;
   
     // Erstellen der Elemente
     let myFrames = $(`
