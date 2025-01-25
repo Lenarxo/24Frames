@@ -33,6 +33,34 @@ body, html {
     scroll-behavior: smooth;
 }
 
+	  .background {
+    position: absolute; /* Raster als Hintergrund */
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #f5f5f5;
+    background-image: linear-gradient(to right, #000 0.5px, transparent 0.5px), linear-gradient(to bottom, #000 0.5px, transparent 0.5px);
+    background-size: 200px 200px;
+    z-index: -12; /* Raster im Hintergrund */
+  transition: background-color 3s ease, background-image 3s ease;
+}
+
+
+	 body.scrolling .background {  /* Farbwechsel-Effekt beim Scrollen auf background anwenden */
+    background-color: #ff69b4; /* Pink Farbe */
+    background-image: linear-gradient(to right, #ff69b4 0.5px, transparent 0.5px), 
+      linear-gradient(to bottom, #ff69b4 0.5px, transparent 0.5px); /* Pink Raster */
+} 
+
+body.scrolling .dot,
+body.scrolling .form1,
+body.scrolling .form2,
+body.scrolling .form3,
+body.scrolling .form4 {
+    opacity: 0; /* Fade out forms on scroll */
+ }
+
 .titel-frame {
     /* for Safari */
     position: relative;
@@ -56,32 +84,102 @@ position: fixed;
 }
 
 
-
-	  .background {
-    position: absolute; /* Raster als Hintergrund */
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: #f5f5f5;
-    background-image: linear-gradient(to right, #000 0.5px, transparent 0.5px), linear-gradient(to bottom, #000 0.5px, transparent 0.5px);
-    background-size: 200px 200px;
-    z-index: -12; /* Raster im Hintergrund */
-  transition: background-color 3s ease, background-image 3s ease;
-}
-
-
-	 body.scrolling .background {  /* Farbwechsel-Effekt beim Scrollen auf background anwenden */
-    background-color: #ff69b4; /* Pink Farbe */
-    background-image: linear-gradient(to right, #ff69b4 0.5px, transparent 0.5px), 
-      linear-gradient(to bottom, #ff69b4 0.5px, transparent 0.5px); /* Pink Raster */
-} 
 /*---- hier fangen die ganzen formen an----*/
 
+	  .form1 {
+   
+    position: fixed;
+    transform: translate(148px, -678px);
+    background-color: #86ff00;
+    width: 300px;
+    height: 300px;
+    z-index: -11; /* Form zwischen Titel und Hintergrund */
+    transition: opacity 3s ease;
+}
+        .form1text {
+          font-size: 16px;
+          font-weight: bold;
+          letter-spacing: -1px;
+          width: 250px;
+          transform: translate(36px, 41px);
+        }
+        .form1 .form1head01 {
+          font-size: 20px;
+          font-family: Hobo Std;
+          position:absolute;
+        transform: translate(-11px,-104px);
+          color:white;
+          background:#000000;
+          border-radius:20px;
+          padding:2px 10px;
+        }
+        .form1 .form1head02 {
+          font-size: 20px;
+          font-family: Hobo Std;
+          position:absolute;
+          transform: translate(-23px,-205px);
+          color:white;
+          background:#000000;
+          border-radius:20px;
+          padding:2px 10px;
+          rotate: 90deg;
+        }
 
+      .form2 {
+        position: fixed;
+        transform: translate(-600px, -374px);
+        background-color: #3d00ff;
+        width: 300px;
+        height: 300px;
+        z-index: -11; /* Form zwischen Titel und Hintergrund */
+        transition: opacity 3s ease;
+            }
 
+      .form3 {
+          position: fixed;
+          transform: translate(-482px, -438px);
+          width: 90px;
+          height: 500px;
+          z-index: -11; /* Form zwischen Titel und Hintergrund */
+          transition: opacity 3s ease;
+         image-rendering: smooth;
+        rotate: -5deg
+      }
+          .form3text {
+        font-family: Hobo Std;
+        font-size: 62px;
+        line-height: 67px;
+          position: fixed;
+          transform: translate(38px, -482px);
+          width: 292px;
+          height: 500px;
+          z-index: 2; /* Form zwischen Titel und Hintergrund */
+          transition: opacity 3s ease;
+          rotate: 20deg
+          }
 
+      .form4 {
+        position: fixed;
+        transform: translate(-1163px, -675px);
+        width: 29px;
+        height: 500px;
+        z-index: -11; /* Form zwischen Titel und Hintergrund */
+        transition: opacity 3s ease;
+        image-rendering: smooth;
+        rotate: 22deg
+         }
 
+      .dot {
+        height: 600;
+        width: 600;
+        position: fixed;
+        transform: translate(-328px, -1028px);
+        background-color: #ff0000;
+        border-radius: 50%;
+        display: inline-block;
+        transition: opacity 3s ease;
+        z-index: -12;
+      }
 
 
 /* ------- IMG Vorschau ------- */
@@ -98,7 +196,6 @@ position: fixed;
   height: 75px; /* Adjust height as needed */ 
 background-color: hotpink;
 }
-
 .imgvorschau3 { width: 100%; 
   background-image: url("./ImageEffects/006Frame.png");
   background-repeat: repeat; 
@@ -186,9 +283,7 @@ display: flex;
   width: 100%;
   height: 3px;
   background-color: #ff0000;
-  border-style: solid;
-  border-width: 3px;
-  border-color: #ffffff;
+
   display: flex;
   justify-content: space-between;
 }
@@ -227,7 +322,7 @@ nav {
 }
 
 #wowc {
-  height: 167px;
+  height: 205px;
   width: auto;
   padding-top: 15px;
 
