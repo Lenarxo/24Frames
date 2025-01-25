@@ -10,8 +10,7 @@
 body {
   font-family: Dejavu Sans Mono; 
  /* hier wäre ein raster, aber das bild ist jetzt ins raster gegangen :D */
-      background-image: linear-gradient(to right, #000 0.5px, transparent 0.5px), linear-gradient(to bottom, #000 0.5px, transparent 0.5px);
-    background-size: 200px 200px;
+      
   background-repeat: round;
   text-decoration: none;
   line-height: 1.4;
@@ -35,24 +34,30 @@ body, html {
 }
 
 .titel-frame {
-    position: -webkit-sticky; /* for Safari */
-    position: sticky;
+    /* for Safari */
+    position: relative;
     top: 0;
+  width: 100%;
+  height: 100vh;
   background-color: white;
-  z-index: 9;
+  z-index: -10;
 }
 
 .titel {
-    font-size: 119px;
-    position: relative; /* Sicherstellen, dass z-index-Bedingungen greifen */
+  font-size: 100px;
+position: fixed;
+  /* Sicherstellen, dass z-index-Bedingungen greifen */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
+  width: 100%
 }
 
-.background {
+
+
+	  .background {
     position: absolute; /* Raster als Hintergrund */
     top: 0;
     left: 0;
@@ -61,173 +66,51 @@ body, html {
     background-color: #f5f5f5;
     background-image: linear-gradient(to right, #000 0.5px, transparent 0.5px), linear-gradient(to bottom, #000 0.5px, transparent 0.5px);
     background-size: 200px 200px;
-    z-index: 1; /* Raster im Hintergrund */
+    z-index: -12; /* Raster im Hintergrund */
   transition: background-color 3s ease, background-image 3s ease;
 }
 
 
-h1 {
-    position: relative; /* Sicherstellen, dass z-index-Bedingungen greifen */
-    z-index: 3; /* Titel im Vordergrund */
-    margin: 0;
-}
-/*---- hier fangen die ganzen formen an----*/
-
-.container { position: relative; height: 100vh; /* Container füllt die gesamte Höhe des Viewports */
-}
-
-.form1 {
-    position: absolute;
-    top: 13%;
-    right: 15%;
-    background-color: #86ff00;
-    width: 500px;
-    height: 500px;
-    z-index: 2; /* Form zwischen Titel und Hintergrund */
-    transition: opacity 3s ease;
-}
-
-@media screen and (max-width: 1024px) 
-{ .form1 { top: 10%; /* Passe nach Bedarf an */ 
-  right: 15%; /* Passe nach Bedarf an */ 
-  width: 400px; /* Passe nach Bedarf an */ 
-  height: 400px; /* Passe nach Bedarf an */ } }
-
-.form2 {
-    position: absolute;
-    top: 54%;
-    right: 67%;
-    background-color: #3d00ff;
-    width: 400px;
-    height: 400px;
-    z-index: 2; /* Form zwischen Titel und Hintergrund */
-    transition: opacity 3s ease;
-}
-
-.form3 {
-    position: absolute;
-    top: 52%;
-    right: 75%;
-    width: 90px;
-    height: 500px;
-    z-index: 2; /* Form zwischen Titel und Hintergrund */
-    transition: opacity 3s ease;
-   image-rendering: smooth;
-  rotate: -5deg
-}
-
-.form4 {
-  font-family: Hobo Std;
-  font-size: 66px;
-  line-height: 67px;
-    position: absolute;
-    top: 59%;
-    right: -499%;
-    width: 292px;
-    height: 500px;
-    z-index: 2; /* Form zwischen Titel und Hintergrund */
-    transition: opacity 3s ease;
-  rotate: 20deg
-}
-
-.form5 {
-    font-family: Hobo Std;
-  font-size: 42px;
-    position: absolute;
-    top: 3%;
-    right: -6%;
-   
-    width: 500px;
-    height: 500px;
-    z-index: 2; /* Form zwischen Titel und Hintergrund */
-    transition: opacity 3s ease;
-}
-
-.form6 {
-    font-family: Hobo Std;
-  font-size: 42px;
-    position: absolute;
-    top: 18%;
-    right: 5%;
-    rotate: 90deg;
-    width: 500px;
-    height: 500px;
-    z-index: 2; /* Form zwischen Titel und Hintergrund */
-    transition: opacity 3s ease;
-}
-
-.form7 {
-    font-family: Dejavu Sans Mono;
-  font-size: 19px;
-  line-height: 23px;
-    position: absolute;
-    top: 24%;
-    right: 21%;
-
-    width: 302px;
-    height: 500px;
-    z-index: 2; /* Form zwischen Titel und Hintergrund */
-    transition: opacity 3s ease;
-}
-.form8 {
-    position: absolute;
-    top: -20%;
-    right: 98%;
-    width: 29px;
-    height: 500px;
-    z-index: 2; /* Form zwischen Titel und Hintergrund */
-    transition: opacity 3s ease;
-   image-rendering: smooth;
-  rotate: 22deg
-}
-
-.dot {
-  height: 700;
-  width: 700;
-      position: absolute;
-    top: -12%;
-    right: 37%;
-  background-color: #ff0000;
-  border-radius: 50%;
-  display: inline-block;
-  transition: opacity 3s ease;
-  z-index: 1;
-}
-
-body.scrolling .background {  /* Farbwechsel-Effekt beim Scrollen auf background anwenden */
+	 body.scrolling .background {  /* Farbwechsel-Effekt beim Scrollen auf background anwenden */
     background-color: #ff69b4; /* Pink Farbe */
     background-image: linear-gradient(to right, #ff69b4 0.5px, transparent 0.5px), 
       linear-gradient(to bottom, #ff69b4 0.5px, transparent 0.5px); /* Pink Raster */
-}
-body.scrolling .dot,
-body.scrolling .form1,
-body.scrolling .form2,
-body.scrolling .form3,
-body.scrolling .form4,
-body.scrolling .form5,
-body.scrolling .form6,
-body.scrolling .form8 {
-    opacity: 0; /* Fade out forms on scroll */
- }
+} 
+/*---- hier fangen die ganzen formen an----*/
+
+
+
+
+
+
+
 /* ------- IMG Vorschau ------- */
 
 .imgvorschau1 { width: 100%; 
   background-image: url("./ImageEffects/004Frame.png");
   background-repeat: repeat; 
-  height: 50px; /* Adjust height as needed */ 
+  height: 75px; /* Adjust height as needed */ 
+  background-color: hotpink;
 }
 .imgvorschau2 { width: 100%; 
   background-image: url("./ImageEffects/005Frame.png");
   background-repeat: repeat; 
-  height: 50px; /* Adjust height as needed */ }
+  height: 75px; /* Adjust height as needed */ 
+background-color: hotpink;
+}
+
 .imgvorschau3 { width: 100%; 
   background-image: url("./ImageEffects/006Frame.png");
   background-repeat: repeat; 
-  height: 50px; /* Adjust height as needed */ }
+  height: 75px; /* Adjust height as needed */
+background-color: hotpink;
+}
 .imgvorschau4 { width: 100%; 
   background-image: url("./ImageEffects/007Frame.png");
   background-repeat: repeat; 
-  height: 50px; /* Adjust height as needed */ }
+  height: 75px; /* Adjust height as needed */ 
+background-color: hotpink;
+}
 
 
 
@@ -239,18 +122,14 @@ a {
   text-decoration: none;
   color: #000000;
 }
-header {
-height: 3%;
-  background-color: #3F0097;
- 
-}
+
 
 /*styling upper, Heidi usw */   
 .upper-frame{
   position: -webkit-sticky; /* for Safari */
     position: sticky;
     top: 0;
-  z-index: 10
+  z-index: 5;
 }
 
 .upper{
@@ -268,12 +147,14 @@ display: flex;
   width: fit-content;
   z-index: 3;
   margin-left: 31px;
-  padding-top: 20px;
+  padding-top: 16px;
+  padding-bottom: 5px;
+  line-height: 75px
 }     
 .heidi02{
   font-size: 17px;
   letter-spacing: -1px;
-  
+  font-weight: bold;
   color: #000000;
   width: 226px;
   z-index: 3;
@@ -297,25 +178,31 @@ display: flex;
   width: fit-content;
   z-index: 3;
   rotate: 30deg;
-  padding-top: 45px;
+  padding-top: 50px;
   margin-right: 15px;
 } 
  
 .zw01 {
-  width: max-content;
+  width: 100%;
   height: 3px;
-  background-color: #f300ff;
+  background-color: #ff0000;
+  border-style: solid;
+  border-width: 3px;
+  border-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
 }
 
 nav { 
   font-family: Hobo Std;
   color: #000000;
   background-color: #FF34E7;
-  height: 100px;
+  height: 80px;
   display: flex;
   justify-content: center;
   z-index: 3;
   font-size: 62px;
+
    
 
 }   
@@ -328,11 +215,24 @@ nav {
 #herz02 {
   z-index: 60;
   height: 118px;
-  transform: translate(30px, -70px);
+  transform: translate(18px, -51px);
   image-rendering: pixelated;
 }    
 
- 
+#pfeilcute {
+  height: 186px;
+  width: auto;
+  padding-top: 6px;
+  transform: translate(-14px, 0)
+}
+
+#wowc {
+  height: 167px;
+  width: auto;
+  padding-top: 15px;
+
+}
+
 
 /* ------- Gallery Darstellung ------- */
 #people{
@@ -345,6 +245,11 @@ nav {
   flex-direction: row;
   flex-flow: wrap;
   justify-content: center;
+  background-color: #ffffff;
+  background-image: linear-gradient(to right, #000 0.5px, transparent 0.5px), 
+    linear-gradient(to bottom, #000 0.5px, transparent 0.5px); 
+  background-size: 200px 200px;
+  
 }
 
 
@@ -376,7 +281,7 @@ outline-color: #e8ff66;
 /* ------- Bilder in der Gallery Darstellung ------- */
 .img {
   position: relative;
-  margin-top: 83px;
+  margin-top: 80px;
     z-index: 0 ; /* Make sure it’s on top */
   padding-bottom: 15%;
 }
@@ -441,18 +346,18 @@ outline-color: #e8ff66;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 180px;
+  width: 192px;
   z-index: 50;
 }
 
 .kunstwerk-up {
     display: flex;
   justify-content: space-between;
-  font-size: 10px;
-  transform: translate(0, 117px);
+  font-size: 11px;
+  transform: translate(0, 122px);
   margin: 0 5;
 
-  width: 170px;
+  width: 192px;
 }
 
 .kunstwerk-up .day, .kunstwerk-up .month, .kunstwerk-up .year {
@@ -463,36 +368,50 @@ outline-color: #e8ff66;
 
 .kunstwerk-up .day {
   font-weight: bold;
+   color:white;
+  background:#000000;
+  border-radius:20px;
+  text-align: center;
 }
 
 .kunstwerk-up .month {
   text-align: center;
+   color:white;
+  background:#000000;
+  border-radius:20px;
 }
 
 .kunstwerk-up .year {
   
-  text-align: right;
+  text-align: center;
+   color:white;
+  background:#000000;
+  border-radius:20px;
 }
 
 
 
-.kunstwerk-left{  font-size: 10px;
+.kunstwerk-left{  font-size: 11px;
   flex: 1;
-  transform: translate(0, 287px);
+  transform: translate(0, 279px);
   margin: 0 5px; /* Optional: fügt Abstand zwischen den Spalten hinzu */
- 
-  width: 170px;
-
+  color:white;
+  background:#000000;
+  border-radius:20px;
+  width: auto;
+text-align: center;
 }
 
 .kunstwerk-right {
-  font-size: 10px;
+  font-size: 11px;
   flex: 1;
-   transform: translate(0, 287px);
+   transform: translate(0, 279px);
   margin: 0 5px; /* Optional: fügt Abstand zwischen den Spalten hinzu */
-
-text-align: right;
-  width: 170px;
+ color:white;
+  background:#000000;
+  border-radius:20px;
+text-align: center;
+  
 }
  /*-- für das datum---*/
 

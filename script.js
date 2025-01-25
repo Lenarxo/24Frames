@@ -26,7 +26,7 @@ https://docs.google.com/spreadsheets/d/1gLyh6gv41vl9H1fBmjFrGfKip9dKkvIu6o8sccTw
 
 /*--- titelseite----*/
 window.addEventListener('scroll', () => {
-    const body = document.body;
+   const body = document.body;
     body.classList.toggle('scrolling', window.scrollY > 0);
 });
 
