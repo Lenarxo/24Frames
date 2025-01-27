@@ -532,10 +532,17 @@ text-align: center;
       justify-content: center;
       max-width: 800px
     }
+
+.container03 {
+  transform: translate(46px, 170px)
+}
+
+
+
     .item {
       flex: 1 1 222px;
       margin: 10px;
-      padding: 20px;
+      
       background-color: #ddd;
       border: 1px solid #ccc;
     }
@@ -613,26 +620,23 @@ text-align: center;
 
 
 }
-.tabelle{
 
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Beispiel für ein dreispaltiges Grid */ 
-  overflow-wrap: break-word;
-    padding: 4px; /* Adds space inside the input fields */
-  width: 100%;
-  /*grid-template-rows: 200px 200px 200px 200px 200px;
-  grid-template-columns: 200px 200px 200px 200px 200px;
-  
-*/
-}
 
 #yourname{
-
-  background-color: hotpink;
-  outline: auto;
-  outline-color: deeppink
-  
+  margin: 0;
+  padding: 0;
+background-color: none;
+  text-decoration: none;
+  width: 378px;
+  height: 92px;
 }
+
+#YourName::placeholder {
+    font-family: 'Hobo Std'; /* Replace 'YourFontFamily' with the desired font */
+    font-size: 16px; /* Adjust to your preference */
+    color: #ff00c6; /* Adjust placeholder text color */
+}
+
 
 #headername{
 width:initial;
@@ -643,7 +647,10 @@ width:initial;
 }
 
 #farbe{
-width:initial;
+width: 200px;
+  margin: 0;
+  padding: 0;
+  
 
 }
 
