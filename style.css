@@ -318,11 +318,12 @@ nav {
   height: 186px;
   width: auto;
   padding-top: 6px;
-  transform: translate(-14px, 0)
+  transform: translate(-14px, 0);
+  image-rendering: pixelated;
 }
 
 #wowc {
-  height: 205px;
+  height: 167px;
   width: auto;
   padding-top: 15px;
 
@@ -515,6 +516,79 @@ text-align: center;
 /* ------- Formular CSS ------- */
 
 /* Editor Part*/
+
+
+    .outercont {
+      display: flex;
+      justify-content: center;
+    }
+
+    .container02 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 1000px
+    }
+    .item {
+      flex: 1 1 348px;
+      margin: 10px;
+      padding: 20px;
+      background-color: #ddd;
+      border: 1px solid #ccc;
+    }
+
+    .itemframe01 {
+      display: flex;
+      flex-direction: row;
+      width: 1000px;
+      
+    }
+
+    .item01 {
+      flex: 1 1 20px;
+      margin: 10px;
+      padding: 20px;
+      background-color: #ddd;
+      border: 1px solid #ccc;
+      height: 130px;
+      
+    }
+    .item02 {
+      flex: 1 1 ;
+      margin: 10px;
+      padding: 20px;
+      background-color: #ddd;
+      border: 1px solid #ccc;
+      
+    }
+
+.itemframe02 {
+      display: flex;
+      flex-direction: row;
+      width: 1000px;
+      
+    }
+
+ .itemframe03 {
+      display: flex;
+      flex-direction: column;
+      width: 200px;
+      
+      
+    }
+
+ .itemframe04 {
+      display: flex;
+      flex-direction: column;
+      width: 800px;
+      
+    }
+
+
+
+
+
+
 .inputerclass {
   display: flex;
   align-items: center;
