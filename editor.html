@@ -20,7 +20,7 @@
   
   <body>
    
-   
+   <div class="background02"></div>
    
   <div class="upper-frame"> 
     <div class="upper">
@@ -35,7 +35,7 @@
              <div class="heidi02head">cute cute cute cute cute</div>
          hallo, ich hoffe, du magst es, deine Bilder zu verziehren! see you and your pics around.</div> 
          
-          <img src="./assets/pfeilcute.png" id= pfeilcute> 
+          <img src="./assets/herz02.png" id= pfeilcute > 
           
          <div class="heidi03">WOW! SO<br>  NOSTALGIC</div>
       </div>
@@ -66,7 +66,7 @@
   <div class="container02">
   
     <div class="item">
-        <input type="text" placeholder="   Your Name" id="YourName" maxlength="12">
+        <input type="text" placeholder="Your Name" id="YourName" maxlength="12">
         </div>
     
     <div class="item">
@@ -78,7 +78,8 @@
         </div>
         
     <div class="item">
-        <input type="color" id="farbe" value="#1E90FF" onchange=ChangeEditorOnce() style="min-height: 25px">
+        <input type="color" id="farbe" value="#9cff23" onchange=ChangeEditorOnce() style="min-height: 25px">
+        <div class="overlay-text">Choose your color :)</div>
         </div>  
         
       
@@ -86,30 +87,35 @@
       
      <div class="itemframe01">
         <div class="item01">
-            <div class="checkbox-container">
-                 <input type="checkbox" id="004Frame" class="likeradio" unchecked/>
-                 <label for="004Frame"><img src="./ImageEffects/004Frame.png" width="100"></label>
-            </div>
-        </div>
+    <div class="checkbox-container">
+        <input type="checkbox" id="004Frame" class="likeradio" />
+        <label for="004Frame"><img src="./ImageEffects/004Frame.png" class="filling-image"></label>
+        <div class="selection-text">this one!</div>
+    </div>
+</div>
+
             
         <div class="item01"> 
             <div class="checkbox-container">
                   <input type="checkbox" id="005Frame" class="likeradio" />
-                  <label for="005Frame"><img src="./ImageEffects/005Frame.png" width="100"></label>
+                  <label for="005Frame"><img src="./ImageEffects/005Frame.png" class="filling-image"></label>
+                  <div class="selection-text">this one!</div>
             </div> 
         </div>
        
         <div class="item01">
             <div class="checkbox-container">
                   <input type="checkbox" id="006Frame"  class="likeradio"/>
-                  <label for="006Frame"><img src="./ImageEffects/006Frame.png" width="100"></label>
+                  <label for="006Frame"><img src="./ImageEffects/006Frame.png" class="filling-image"></label>
+                  <div class="selection-text">this one!</div>
             </div> 
         </div>
         
         <div class="item01">
             <div class="checkbox-container">
                   <input type="checkbox" id="007Frame"  class="likeradio"/>
-                  <label for="007Frame"><img src="./ImageEffects/007Frame.png" width="100"></label>
+                  <label for="007Frame"><img src="./ImageEffects/007Frame.png" class="filling-image"></label>
+                  <div class="selection-text">this one!</div>
               </div> 
         </div>
         
@@ -128,13 +134,29 @@
             
     </div>
     
-        <div class="itemframe05">
-            <div class="item02">
-                <label for="background-image">your image URL:</label>    
-                     <input type="url" id="Bg-Image" placeholder="https://your-image.de"> 
-            </div>
-            
+    <div class="itemframe05">
+    <div class="item02">
+        <input type="text" id="Bg-Image" class="circle-input" placeholder="Paste your image URL here...">
+        <div class="circle-text-container">
+            <svg viewBox="0 0 280 280" class="circle-text-svg">
+                <path id="circle" d="M140,140 m-130,0 a 130,130 0 1,1 260,0 a 130,130 0 1,1 -260,0" />
+                <text>
+                    <textPath id="text-path" href="#circle">Paste your image URL here...</textPath>
+                </text>
+            </svg>
+        </div>
+        <div class="image-preview-container">
+            <img id="preview-img" class="image-preview" src="" alt="Image Preview">
+        </div>
     </div>
+</div>
+
+
+
+
+
+
+
     </div>
     </div>
     
@@ -228,9 +250,53 @@ $(".likeradio").change(function()
 
 //changes Site
 function ChangeEditorOnce(){
-        document.body.style.background = document.getElementById("Color").value ;
+        document.getElementsByClassName("background02").style.background = document.getElementById("farbe").value ;
        // document.getElementById("Numbersgoer").textContent = "hello "+document.getElementById("HeaderName").value ;
     
 }
+        
+        
+        //for circular input
+        
+document.addEventListener("DOMContentLoaded", () => {
+    const bgImage = document.getElementById('Bg-Image');
+    const textPath = document.getElementById('text-path');
+    const previewImg = document.getElementById('preview-img');
+
+    bgImage.addEventListener('input', () => {
+        const value = bgImage.value;
+        textPath.textContent = value;
+
+        // Check if the URL is a valid image URL
+        if (value && (value.startsWith('http') || value.startsWith('https'))) {
+            previewImg.src = value;
+            previewImg.style.display = 'block';
+        } else {
+            previewImg.style.display = 'none';
+        }
+    });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const checkboxes = document.querySelectorAll('.likeradio');
+    const selectionTexts = document.querySelectorAll('.selection-text');
+
+    checkboxes.forEach((checkbox, index) => {
+        checkbox.addEventListener('change', () => {
+            if (checkbox.checked) {
+                selectionTexts.forEach((text, i) => {
+                    if (i === index) {
+                        text.textContent = 'This one!';
+                    } else {
+                        text.textContent = 'No, this one!';
+                    }
+                });
+            }
+        });
+    });
+});
+
+
+        
     </script>
   </body> </html>
