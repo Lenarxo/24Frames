@@ -639,17 +639,43 @@ background-color: none;
 
 
 #headername{
-width:initial;
+ margin: 0;
+  padding: 0;
+background-color: none;
+  text-decoration: none;
+  width: 378px;
+  height: 92px;
 }
+#headername::placeholder {
+    font-family: 'Hobo Std'; /* Replace 'YourFontFamily' with the desired font */
+    font-size: 16px; /* Adjust to your preference */
+    color: #ff00c6; /* Adjust placeholder text color */
+}
+
+#date{
+  font-family: 'Hobo Std'; /* Replace 'YourFontFamily' with the desired font */
+    font-size: 16px; /* Adjust to your preference */
+    color: #ff00c6;
+ margin: 0;
+  padding: 0;
+background-color: none;
+  text-decoration: none;
+  width: 378px;
+  height: 92px;
+}
+
 
 #yourimg{
 width:initial;
 }
 
 #farbe{
-width: 200px;
-  margin: 0;
+ margin: 0;
   padding: 0;
+background-color: none;
+  text-decoration: none;
+  width: 378px;
+  height: 92px;
   
 
 }
