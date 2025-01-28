@@ -56,6 +56,8 @@
 
    <!-- have it in the middle >-->
 <div class="outercont-buttons">  
+<div class="innercont-buttons01">  
+
 
 <div id="inputer" class="inputerclass">
    <form action="copier"> 
@@ -167,47 +169,32 @@
 
     </div>
     </div>
-    
-    <div class="container03">
-        <div class="item01">
-        </div>
-        
-        <img src="./assets/Herz02.png">
-        
-        
-        
-        
-        <div class="item01">
-            
-        </div>
-    </div>
-    
-    
-    
   </div>
 </form>
 
-     
-      
+    </div>   
 
 
-    
-     
-
      
      
-     
+ <div class="innercont-buttons02">     
 <!-- The button used to copy the text -->
 <button onclick="CopyEachOne()">Copy text</button> <br>
 
-
+<img src="./assets/Herz02.png" image-rendering=pixelated>
   <!--Send it Over -->   
 <form action="https://docs.google.com/forms/d/e/1FAIpQLSeIePQe2RlzDWoSGJ9k7rjwft-QQkpKY2_qSFwnrNCorADV7w/viewform" target="_blank">
     <input type="submit" value="Send it to the Google Form" />  
   
 </form>
     </div>
+     </div>
       </div>
+    
+  
+      
+      
+      
     
     
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
@@ -299,4 +286,42 @@ document.addEventListener("DOMContentLoaded", () => {
 
         
     </script>
-  </body> </html>
+  </body> 
+  </html>
+  
+  
+   <!--button style -->  
+   <style>
+    button {
+      width: 100px; /* Adjust the size as needed */
+      height: 100px; /* Adjust the size as needed */
+      background-color: white;
+      font-family: 'Dejavu Sans Mono';
+      font-weight: bold;
+      font-size: 16px;
+      color: black;
+      border: 1px solid #858585; 
+      border-radius: 3px;
+      
+    }
+
+    button:hover {
+      background-color: #ffebfb; /* Optional: change color on hover */
+    }
+       
+        input[type="submit"] {
+      width: 100px; /* Adjust the size as needed */
+      height: 100px; /* Adjust the size as needed */
+      background-color: white;
+      font-family: 'Dejavu Sans Mono';
+      font-weight: bold;
+      font-size: 16px;
+      color: black;
+      border: 1px solid #858585; 
+      border-radius: 3px;
+    }
+    
+    input[type="submit"]:hover {
+      background-color: #ffebfb;
+    }
+  </style>
