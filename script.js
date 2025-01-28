@@ -144,6 +144,11 @@ if (InputValuesArray.at(1) && UsersBackground) {
        
                     if (InputValuesArray.at(7) && InputValuesArray.at(7) == "007Frame") {
             $(`<div class='imgEffects'><img src="` + "./ImageEffects/007Frame.png" + `"></div>`).appendTo(RahmenHintermBackground);   }
+      
+        if (InputValuesArray.at(6) && InputValuesArray.at(6) == "009Frame") {
+            $(`<div class='imgEffects'><img src="` + "./ImageEffects/009Frame.png" + `"></div>`).appendTo(RahmenHintermBackground);   }
+       
+      
       //     console.log(uploadedImgParsed.replace(beforeReplace,afterReplace));
     }); // the end of data forEach our function
     

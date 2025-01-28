@@ -55,7 +55,7 @@
     
 
    <!-- have it in the middle >-->
-  
+<div class="outercont-buttons">  
 
 <div id="inputer" class="inputerclass">
    <form action="copier"> 
@@ -66,11 +66,11 @@
   <div class="container02">
   
     <div class="item">
-        <input type="text" placeholder="Your Name" id="YourName" maxlength="12">
+        <input type="text" class="item01-input" font-family="Hobo Std" placeholder="Your Name" id="YourName" maxlength="12">
         </div>
     
     <div class="item">
-        <input type="text" placeholder="Name of your Nostalgic Thing :)" id="HeaderName" maxlength="12"> 
+        <input type="text" class="item01-input" placeholder="Name of your Nostalgic Thing :)" id="HeaderName" maxlength="12"> 
         </div>
         
     <div class="item">
@@ -123,7 +123,15 @@
        
     <div class="itemframe02">
         <div class="itemframe03">
-            <div class="item01">pattern</div>
+            <div class="item01">
+                <div class="item01">
+            <div class="checkbox-container">
+                  <input type="checkbox" id="009Frame"  class="likeradio"/>
+                  <label for="009Frame"><img src="./ImageEffects/009Frame.png" class="filling-image"></label>
+                  <div class="selection-text">this one!</div>
+              </div> 
+        </div>
+            </div>
             <div class="item01">pattern</div>
             
     </div>
@@ -199,17 +207,28 @@
   
 </form>
     </div>
-
+      </div>
     
     
-    
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
     <script>
       //let the frame checkboxes behave like radio buttons
-$(".likeradio").change(function()
- {
-  $(".likeradio").prop('checked',false);
-  $(this).prop('checked',true);
-});
+let lastChecked;
+    
+    $(".likeradio").change(function() {
+        const checkboxes = $(".likeradio");
+        if (lastChecked && lastChecked !== this) {
+            lastChecked.checked = false;
+            $(lastChecked).siblings(".selection-text").text("this one!");
+        }
+
+        if (this.checked) {
+            const labelText = lastChecked ? "no, this one!" : "this one!";
+            $(this).siblings(".selection-text").text(labelText);
+        }
+        
+        lastChecked = this;
+    });
       
       
  function CopyEachOne() {
@@ -224,6 +243,7 @@ $(".likeradio").change(function()
         "006Frame",
         "007Frame",
         "date",
+        "009Frame",
     ];
 
     arrayInputs.forEach(function (inputId) {
@@ -276,26 +296,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
-
-document.addEventListener("DOMContentLoaded", () => {
-    const checkboxes = document.querySelectorAll('.likeradio');
-    const selectionTexts = document.querySelectorAll('.selection-text');
-
-    checkboxes.forEach((checkbox, index) => {
-        checkbox.addEventListener('change', () => {
-            if (checkbox.checked) {
-                selectionTexts.forEach((text, i) => {
-                    if (i === index) {
-                        text.textContent = 'This one!';
-                    } else {
-                        text.textContent = 'No, this one!';
-                    }
-                });
-            }
-        });
-    });
-});
-
 
         
     </script>
