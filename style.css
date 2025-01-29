@@ -538,15 +538,21 @@ text-align: center;
       display: flex;
       justify-content: center;
    flex-direction: row;
+   flex-wrap: wrap;
+  
+  
    
     }
-.innercont-buttons01 {display: flex;}
+.innercont-buttons01 {
+  display: flex;
+  min-width: 1191px;
+}
 .innercont-buttons02 { 
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 30px;
 min-height: 100px;
+  width: 300px;
 }
 
     .outercont {
@@ -793,6 +799,7 @@ input[type="checkbox"]:checked + label + .selection-text {
     position: relative;
     width: 113%;
     height: 100%;
+  
 }
 
 .circle-text-svg {
@@ -806,6 +813,7 @@ input[type="checkbox"]:checked + label + .selection-text {
     fill: none;
     stroke: none;
     text-align: center;
+  
 }
 
 text {
@@ -833,4 +841,12 @@ text {
     height: 100%;
     object-fit: cover; /* Ensures the image fits perfectly within the circle */
     display: none; /* Hide initially */
+}
+
+#stern05 {
+  z-index: -8;
+  height: 263px;
+  width: 259px;
+  rotate: 71deg;
+  transform: translate(75px, -33px) 
 }

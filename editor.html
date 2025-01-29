@@ -76,12 +76,15 @@
         </div>
         
     <div class="item">
-        <input type="date" id="date">
-        </div>
+  <input type="text" id="date" value="Date from back then" 
+         onfocus="if(this.value==='Date from back then'){this.value='';this.type='date';}"
+         onblur="if(this.value===''){this.type='text';this.value='Date from back then';}">
+</div>
+
         
     <div class="item">
         <input type="color" id="farbe" value="#9cff23" onchange=ChangeEditorOnce() style="min-height: 25px">
-        <div class="overlay-text">Choose your color :)</div>
+        <div class="overlay-text">Choose your color</div>
         </div>  
         
       
@@ -152,12 +155,13 @@
                 <path id="circle" d="M140,140 m-130,0 a 130,130 0 1,1 260,0 a 130,130 0 1,1 -260,0" />
                 <text>
                     <textPath id="text-path" href="#circle">Paste your image URL here...</textPath>
-                </text>
+                </text><img src="./assets/stern02.png" id= stern05>   
             </svg>
         </div>
         <div class="image-preview-container">
-            <img id="preview-img" class="image-preview" src="" alt="Image Preview">
+            <img id="preview-img" class="image-preview" src="" alt="Image Preview"> 
         </div>
+        
     </div>
 </div>
 
@@ -181,12 +185,14 @@
 <!-- The button used to copy the text -->
 <button onclick="CopyEachOne()">Copy text</button> <br>
 
-<img src="./assets/Herz02.png" image-rendering=pixelated>
+<img src="./assets/arrow01.png" id="arrow01" height="auto" width="100px">
   <!--Send it Over -->   
-<form action="https://docs.google.com/forms/d/e/1FAIpQLSeIePQe2RlzDWoSGJ9k7rjwft-QQkpKY2_qSFwnrNCorADV7w/viewform" target="_blank">
-    <input type="submit" value="Send it to the Google Form" />  
-  
-</form>
+<div class="form-container">
+  <form action="https://docs.google.com/forms/d/e/1FAIpQLSeIePQe2RlzDWoSGJ9k7rjwft-QQkpKY2_qSFwnrNCorADV7w/viewform" target="_blank">
+    <input type="submit" class="input-button" />
+    <div class="overlay-text-form">Send it to the <br>Google Form!</div>
+  </form>
+</div>
     </div>
      </div>
       </div>
@@ -285,6 +291,12 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
         
+        
+        //placeholder for date
+
+
+
+        
     </script>
   </body> 
   </html>
@@ -309,14 +321,12 @@ document.addEventListener("DOMContentLoaded", () => {
       background-color: #ffebfb; /* Optional: change color on hover */
     }
        
-        input[type="submit"] {
-      width: 100px; /* Adjust the size as needed */
+         .input-button {
+      width: 200px; /* Adjust the size as needed */
       height: 100px; /* Adjust the size as needed */
       background-color: white;
       font-family: 'Dejavu Sans Mono';
-      font-weight: bold;
-      font-size: 16px;
-      color: black;
+      color: transparent;
       border: 1px solid #858585; 
       border-radius: 3px;
     }
@@ -324,4 +334,28 @@ document.addEventListener("DOMContentLoaded", () => {
     input[type="submit"]:hover {
       background-color: #ffebfb;
     }
+       
+     .form-container {
+    position: relative;
+    display: inline-block;
+  }
+       
+       .overlay-text-form {
+    position: absolute;
+    transform: translate(50%, 50%);
+    font-family: 'Hobo Std'; 
+    font-size: 16px; 
+    color: #000000; 
+    pointer-events: none;
+   z-index: 3;/* Ensures it doesn't interfere with the color input */
+           pointer-events: none;
+               
+}
+       
+       #arrow01 {
+           image-rendering: pixelated;
+           rotate: 180deg;
+           transform: translate(0, 25px)
+       }      
+       
   </style>
