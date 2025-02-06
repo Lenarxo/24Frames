@@ -8,7 +8,7 @@
 }
 
 body {
-  font-family: Dejavu Sans Mono; 
+  font-family: Hobo Std; 
  /* hier wäre ein raster, aber das bild ist jetzt ins raster gegangen :D */
       
   background-repeat: round;
@@ -72,7 +72,7 @@ body.scrolling .form4 {
 }
 
 .titel {
-  font-size: 100px;
+  font-size: 70px;
 position: fixed;
   /* Sicherstellen, dass z-index-Bedingungen greifen */
     display: flex;
@@ -84,8 +84,17 @@ position: fixed;
 }
 
 h1 {
-  line-height: 230px;
+  line-height: 145px;
   transform: translate(0, -65px)
+}
+
+
+#upper-bg{
+  height: 633px;
+  width: auto;
+  position: fixed;
+  transform: translate(-31px, -56px);
+  z-index: -1;
 }
 /*---- hier fangen die ganzen formen an----*/
 
@@ -212,7 +221,13 @@ background-color: #ffa1d6;
 background-color: #f93aa6;
 }
 
+.infotext {
+  width: 100%; 
+ 
+  height: 172px; /* Adjust height as needed */ 
+background-color: #edffa1;
 
+}
 
 
 
@@ -248,6 +263,8 @@ display: flex;
   width: fit-content;
   z-index: 3;
   padding-left: 2vh;
+  border-radius: 50px;
+  background-color: white;
 
 }     
 .heidi02{
@@ -292,8 +309,8 @@ display: flex;
 
 .zw02 {
   width: 100%;
-  height: 5px;
-  background-color: #FF34E7;
+  height: 1px;
+  background-color: #000000;
   display: flex;
   justify-content: space-between;
  }
