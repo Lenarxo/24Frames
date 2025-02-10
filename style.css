@@ -40,19 +40,16 @@ body, html {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: #f4edff;
-    background: linear-gradient(to bottom, #f4edff 0%, #59e3fb 33%, #59FBF5 100%);
-
+    background: linear-gradient(to bottom, #f4edff 0%,  #ffeb4b 100%);
     z-index: -12; /* Raster im Hintergrund */
   transition: background-color 3s ease, background-image 3s ease;
 }
 
 
-	 body.scrolling .background {  /* Farbwechsel-Effekt beim Scrollen auf background anwenden */
+  body.scrolling .background {  /* Farbwechsel-Effekt beim Scrollen auf background anwenden */
     background-color: #dc38f6; /* Pink Farbe */
-    background-image: linear-gradient(to right, #e9cadb 0.5px, transparent 0.5px), 
-      linear-gradient(to bottom, #f93aa6 0.5px, transparent 0.5px); /* Pink Raster */
-} 
+    background-image: none; /* Keine Raster */
+  }
 
 body.scrolling .dot,
 body.scrolling .form1,
@@ -73,7 +70,7 @@ body.scrolling .form4 {
 }
 
 .titel {
-  font-size: 13px;
+  font-size: 2px;
   font-family: 'Bagnard';
   font-weight: 2;
 position: fixed;
@@ -83,13 +80,27 @@ position: fixed;
     justify-content: center;
     align-items: center;
     height: 100vh;
-  width: 100%
+  width: 100%;
+  color: black;
+  
 }
 
-h1 {
-  line-height: 99px;
-  transform: translate(0, -65px)
+.wave-text {
+  font-size: 34px;
+  line-height: 42px;
+  transform: translate(410px, 15px);
+  color: black;
+  background-color: #fffe71;
+  
+  border: 2px solid;
+  border-radius: 10px;
+ 
 }
+
+
+
+
+
 
 
 #upper-bg{
@@ -131,26 +142,32 @@ background-color: #ffffff;
 background-color: #ffffff;
 }
 
-.infotext {
-  width: 100%; 
-  height: 31vh; /* Adjust height as needed */ 
+.marquee {
   
-background-color: #dc38f6;
+  width: 100%; 
+  overflow: hidden;
+  white-space: nowrap;
+  /* Adjust height as needed */ 
+  height: 3vh;
+background-color: #000000;
+  color: white;
 display: flex;
   justify-content: center;
   align-items: center;
+  position: fixed;
+    bottom: 0;
+  z-index: 50;
 }
 
-.infotext-inner {
-  font-family: 'Bagnard';
-  background-color: #eae1f7;
-  padding: 6vh;
-  border-radius: 50%;
-  border: 2px solid;
-
-}
-
-
+  .marquee span {
+    display: inline-block;
+    min-width: 100%;
+    animation: marquee 20s linear infinite;
+  }
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
 
 /* ------- Header ------- */
 a {
@@ -285,10 +302,11 @@ nav {
   min-height: auto;
 
   padding: auto;
-  margin: 10px;
+  margin: -4px;
   text-overflow: ellipsis;
   z-index: 3;
   overflow: hidden; 
+  
   
   
   /*----background-color: #e8ff66;
@@ -336,6 +354,7 @@ outline-color: #e8ff66;
   transform: translate(0, 30%);
    z-index: -3; /* Make sure it’s on top */
  border: 1px solid;
+  border-radius: 10px;
 }
 
 /* ------- Bilderrahmen VOR dem Bild Darstellung ------- */
@@ -448,7 +467,7 @@ text-align: center;
     left: 0;
     height: 100vh;
     width: 100%;
-    background-color: #f4edff;
+    background-color: #eae1f7;
     z-index: -11;
 }
 
@@ -591,7 +610,7 @@ background-color: none;
 #YourName::placeholder {
     font-family: 'Hobo Std'; /* Replace 'YourFontFamily' with the desired font */
     font-size: 16px; /* Adjust to your preference */
-    color: #ff00c6; /* Adjust placeholder text color */
+    color: #000000; /* Adjust placeholder text color */
 }
 
 
@@ -670,7 +689,7 @@ input[type="checkbox"] {
     background-color: #000000;
     margin-top:-26px;
   margin-left:-11px;
-  color:white;
+  color: #eae1f7;
   background:#000000;
   border-radius:20px;
   padding:2px 10px;
@@ -693,7 +712,7 @@ input[type="checkbox"]:checked + label + .selection-text {
     width: 388px;
     height: 364px;
     margin: 0 auto;
-    background-color: white; /* Set the background to white */
+    background-color: 'eae1f7; /* Set the background to white */
 }
 
 .circle-input {
@@ -737,7 +756,7 @@ input[type="checkbox"]:checked + label + .selection-text {
 }
 
 text {
-    fill: #ff00c6; /* Set text color to pink */
+    fill: #000000; /* Set text color to pink */
     font-family: 'Hobo Std'; 
     font-size: 16px; 
     
