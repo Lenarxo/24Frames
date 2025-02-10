@@ -71,13 +71,11 @@ body.scrolling .form4 {
 
 .titel {
   font-size: 2px;
-  font-family: 'Bagnard';
+  
   font-weight: 2;
 position: fixed;
   /* Sicherstellen, dass z-index-Bedingungen greifen */
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
     height: 100vh;
   width: 100%;
@@ -86,14 +84,15 @@ position: fixed;
 }
 
 .wave-text {
+  display: flex;
+  flex-wrap: wrap;
   font-size: 34px;
   line-height: 42px;
-  transform: translate(410px, 15px);
+padding-left: 2vh;
   color: black;
-  background-color: #fffe71;
+  transform: translate(0, -23vh)
   
-  border: 2px solid;
-  border-radius: 10px;
+
  
 }
 
@@ -182,15 +181,18 @@ a {
     position: sticky;
     top: 0;
   z-index: 5;
+  
 }
 
 .upper{
 display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   background-color: #dc38f6;
-
+padding-left: 2vh;
       z-index: 2;
+  height: 95px;
   }
  
 .heidi{
@@ -246,9 +248,10 @@ nav {
 
 #stern04 {
   z-index: 30;
-  height: 94px;
-  transform: translate(39px, -12px);
+  height: 71px;
+  transform: translate(26px, -18px);
   image-rendering: pixelated;
+  
 }
     
 #herz02 {
@@ -784,8 +787,8 @@ text {
 
 #stern05 {
   z-index: -8;
-  height: 263px;
-  width: 259px;
-  rotate: 71deg;
-  transform: translate(75px, -33px) 
+  height: 301px;
+  width: auto;
+ image-rendering: pixelated;
+  transform: translate(39px, 40px) 
 }
