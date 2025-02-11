@@ -121,6 +121,7 @@ padding-left: 2vh;
   background-repeat: repeat; 
   height: 75px; /* Adjust height as needed */ 
   background-color: #dc38f6;
+  image-rendering: pixelated;
 }
 .imgvorschau2 { width: 100%; 
   background-image: url("./ImageEffects/005Frame.png");
@@ -177,8 +178,8 @@ a {
 
 /*styling upper, Heidi usw */   
 .upper-frame{
-  position: -webkit-sticky; /* for Safari */
-    position: sticky;
+  position: fixed;
+  width: 100%; 
     top: 0;
   z-index: 5;
   
@@ -221,7 +222,7 @@ padding-left: 2vh;
 
 .zw02 {
   width: 100%;
-  height: 1px;
+  height: 2px;
   background-color: #000000;
   display: flex;
   justify-content: space-between;
@@ -356,7 +357,7 @@ outline-color: #e8ff66;
   height: 300px;
   transform: translate(0, 30%);
    z-index: -3; /* Make sure it’s on top */
- border: 1px solid;
+ border: 2px solid;
   border-radius: 10px;
 }
 
@@ -471,7 +472,7 @@ text-align: center;
     left: 0;
     height: 100vh;
     width: 100%;
-    background-color: #eae1f7;
+    background-color: #dc38f6;
     z-index: -11;
 }
 
@@ -480,28 +481,18 @@ text-align: center;
  .outercont-buttons {
       display: flex;
       justify-content: center;
-   flex-direction: row;
+   flex-direction: column;
    flex-wrap: wrap;
-  
-  
-   
     }
 .innercont-buttons01 {
-  display: flex;
   min-width: 1191px;
 }
-.innercont-buttons02 { 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.innercont-buttons02 {
 min-height: 100px;
   width: 300px;
 }
 
-    .outercont {
-      display: flex;
-      justify-content: center;
-    }
+  
 
     .container02 {
       display: flex;
@@ -585,10 +576,11 @@ min-height: 100px;
 .inputerclass {
   display: flex;
   align-items: center;
-  flex-direction: column; /* Elemente in einer Spalte anordnen */
+  justify-content: center
+  /* Elemente in einer Spalte anordnen */
 
-  margin: 1em auto;
-  width: 50vw; /* Setzt die Breite auf die Hälfte der Seitenbreite */
+
+/* Setzt die Breite auf die Hälfte der Seitenbreite */
 }
 
 
@@ -630,14 +622,14 @@ background-color: none;
 #headername::placeholder {
     font-family: 'Hobo Std'; /* Replace 'YourFontFamily' with the desired font */
     font-size: 16px; /* Adjust to your preference */
-    color: #ff00c6; /* Adjust placeholder text color */
+    color: #000000; /* Adjust placeholder text color */
 }
 
 #date{
   font-family: 'Hobo Std'; /* Replace 'YourFontFamily' with the desired font */
     font-size: 16px;
   text-align: center;
-    color: #ff00c6;
+    color: #000000;
  margin: 0;
   padding: 0;
 background-color: none;
@@ -661,7 +653,7 @@ background-color: none;
     transform: translate(0%, 0%);
     font-family: 'Hobo Std'; 
     font-size: 16px; 
-    color: #ff00c6; 
+    color: #000000; 
     pointer-events: none;
    z-index: 3;/* Ensures it doesn't interfere with the color input */
 }
@@ -680,7 +672,7 @@ input[type="checkbox"] {
 .item01-input {
    font-family: 'Hobo Std'; 
    font-size: 16px; 
-   color: #ff00c6; 
+   color: #000000; 
 }
 
 .selection-text {
@@ -792,4 +784,45 @@ text {
   width: auto;
  image-rendering: pixelated;
   transform: translate(39px, 40px) 
+}
+
+
+
+.section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            height: 100vh;
+            scroll-snap-align: start;
+            scroll-snap-type: y mandatory;
+        }
+        .section button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #ecef43;
+            border: 2px solid;
+            border-radius: 3px;
+        }
+
+
+
+
+.gradient-circle {
+    width: 70vh;  /* Diameter of the circle */
+    height: 70vh;
+    background: radial-gradient(circle, #f4edff, #ffeb4b);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    border: 2px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

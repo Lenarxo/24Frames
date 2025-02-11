@@ -45,45 +45,87 @@
       </div>
     
 
-    
-
-   <!-- have it in the middle >-->
-<div class="outercont-buttons">  
-<div class="innercont-buttons01">  
-
-
+   
+   <!-- sections >-->
+   
+   
+   
+    <div class="outercont-buttons">  
 <div id="inputer" class="inputerclass">
    <form action="copier"> 
-
-
-
-<div class="outercont">
-  <div class="container02">
-  
-    <div class="item">
-        <input type="text" class="item01-input" font-family="Hobo Std" placeholder="Your Name" id="YourName" maxlength="12">
+   
+   
+   
+      <!-- img einfügen >-->
+    <div class="section sec-01" id="sec-01">
+        <div class="sec-text">Our Blog</div>
+        <div class="itemframe05">
+    <div class="item02">
+        <input type="text" id="Bg-Image" class="circle-input" placeholder="Paste your image URL here...">
+        <div class="circle-text-container">
+            <svg viewBox="0 0 280 280" class="circle-text-svg">
+                <path id="circle" d="M140,140 m-130,0 a 130,130 0 1,1 260,0 a 130,130 0 1,1 -260,0" />
+                <text>
+                    <textPath id="text-path" href="#circle">Paste your image URL here...</textPath>
+                </text><img src="./assets/stern05.png" id= stern05>   
+            </svg>
         </div>
+        <div class="image-preview-container">
+            <img id="preview-img" class="image-preview" src="" alt="Image Preview"> 
+        </div>
+    </div>
+</div>
+        <button onclick="document.getElementById('sec-02').scrollIntoView({behavior: 'smooth'}); return false;">Next Section</button>
+        <div class="gradient-circle"></div> 
+     </div>
     
-    <div class="item">
-        <input type="text" class="item01-input" placeholder="Name of your Nostalgic Thing :)" id="HeaderName" maxlength="12"> 
-        </div>
+    
+    
+   <!-- name >-->
+
+ <div class="section sec-02" id="sec-02">
         
-    <div class="item">
-  <input type="text" id="date" value="Date from back then" 
+        <h1>Welcome to My Website</h1>
+        <input type="text" class="item01-input" font-family="Hobo Std" placeholder="Your Name" id="YourName" maxlength="12">
+        <button onclick="document.getElementById('sec-03').scrollIntoView({behavior: 'smooth'}); return false;">Next Section</button>
+    </div>
+
+   
+      <!-- Titel >-->
+    <div class="section sec-03" id="sec-03">
+        <div class="sec-text">About Us</div>
+       <input type="text" class="item01-input" placeholder="Name of your Nostalgic Thing :)" id="HeaderName" maxlength="12">
+        <button onclick="document.getElementById('sec-04').scrollIntoView({behavior: 'smooth'}); return false;">Next Section</button>
+    </div>
+
+   
+
+    
+   
+    <!-- datum >-->
+    <div class="section sec-04" id="sec-04">
+        <div class="sec-text">Our Services</div>
+         <input type="text" id="date" value="Date from back then" 
          onfocus="if(this.value==='Date from back then'){this.value='';this.type='date';}"
          onblur="if(this.value===''){this.type='text';this.value='Date from back then';}">
-</div>
+        <button onclick="document.getElementById('sec-05').scrollIntoView({behavior: 'smooth'}); return false;">Next Section</button>
+    </div>
 
-        
-    <div class="item">
-        <input type="color" id="farbe" value="#9cff23" onchange=ChangeEditorOnce() style="min-height: 25px">
+   
+    <!-- farbe >-->
+    <div class="section sec-05" id="sec-05">
+        <div class="sec-text">Our Portfolio</div>
+         <input type="color" id="farbe" value="#9cff23" onchange=ChangeEditorOnce() style="min-height: 25px">
         <div class="overlay-text">Choose your color</div>
-        </div>  
-        
-      
-      
-      
-     <div class="itemframe01">
+        <button onclick="document.getElementById('sec-06').scrollIntoView({behavior: 'smooth'}); return false;">Next Section</button>
+    </div>
+
+   
+   
+    <!-- pattern >-->
+    <div class="section sec-06" id="sec-06">
+        <div class="sec-text">Testimonials</div>
+                     <div class="itemframe01">
         <div class="item01">
     <div class="checkbox-container">
         <input type="checkbox" id="004Frame" class="likeradio" />
@@ -92,7 +134,6 @@
     </div>
 </div>
 
-            
         <div class="item01"> 
             <div class="checkbox-container">
                   <input type="checkbox" id="005Frame" class="likeradio" />
@@ -116,69 +157,38 @@
                   <div class="selection-text">this one!</div>
               </div> 
         </div>
-        
     </div>
-       
-    <div class="itemframe02">
-        <div class="itemframe03">
-            <div class="item01">
-                <div class="item01">
-            <div class="checkbox-container">
-                  <input type="checkbox" id="009Frame"  class="likeradio"/>
-                  <label for="009Frame"><img src="./ImageEffects/009Frame.png" class="filling-image"></label>
-                  <div class="selection-text">this one!</div>
-              </div> 
-        </div>
-            </div>
-            <div class="item01">pattern</div>
-            
+        <button onclick="document.getElementById('sec-07').scrollIntoView({behavior: 'smooth'}); return false;">Next Section</button>
     </div>
+
+   
+   
+ 
+ 
     
-        <div class="itemframe03">
-            <div class="item01">pattern</div>
-            <div class="item01">pattern</div>
-            
-    </div>
     
-    <div class="itemframe05">
-    <div class="item02">
-        <input type="text" id="Bg-Image" class="circle-input" placeholder="Paste your image URL here...">
-        <div class="circle-text-container">
-            <svg viewBox="0 0 280 280" class="circle-text-svg">
-                <path id="circle" d="M140,140 m-130,0 a 130,130 0 1,1 260,0 a 130,130 0 1,1 -260,0" />
-                <text>
-                    <textPath id="text-path" href="#circle">Paste your image URL here...</textPath>
-                </text><img src="./assets/stern05.png" id= stern05>   
-            </svg>
-        </div>
-        <div class="image-preview-container">
-            <img id="preview-img" class="image-preview" src="" alt="Image Preview"> 
-        </div>
-        
-    </div>
-</div>
+
+   
 
 
 
 
-
-
-
-    </div>
-    </div>
-  </div>
 </form>
-
     </div>   
 
 
-     
-     
- <div class="innercont-buttons02">     
+ <!-- buttons >-->
+
+ 
+  <div class="section sec-07" id="sec-07">
+        <div class="sec-text"></div>
+        
+             
+ <div class="outercont-buttons02">     
 <!-- The button used to copy the text -->
 <button onclick="CopyEachOne()">Copy text</button> <br>
 
-<img src="./assets/arrow01.png" id="arrow01" height="auto" width="100px">
+
   <!--Send it Over -->   
 <div class="form-container">
   <form action="https://docs.google.com/forms/d/e/1FAIpQLSeIePQe2RlzDWoSGJ9k7rjwft-QQkpKY2_qSFwnrNCorADV7w/viewform" target="_blank">
@@ -187,11 +197,10 @@
   </form>
 </div>
     </div>
+ 
      </div>
-      </div>
-    
   
-      
+     </div>  
       
       
     
