@@ -92,14 +92,14 @@ position: fixed;
   line-height: 42px;
 padding-left: 2vh;
   color: black;
-  transform: translate(0, -23vh);
+ top: 20%;
 
 
  
 }
 
 .wave-text a {
-  color: black;
+  color: #000000;
   text-decoration: none; /* Optional: Remove underline from link */
 }
 
@@ -532,9 +532,9 @@ min-height: 100px;
     }
 
     .item01 {
-      flex: 1 1;
+      width: 184px;
       margin: 10px;
-    
+     
       background-color: #ffffff;
      border: 2px solid;
   border-radius: 10px;
