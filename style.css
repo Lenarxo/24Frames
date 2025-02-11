@@ -527,8 +527,8 @@ min-height: 100px;
       margin: 10px;
     
       background-color: #ffffff;
-      border: 1px solid #6c6c6c;
-      border-radius: 3px;
+     border: 2px solid;
+  border-radius: 10px;
       aspect-ratio: 1 / 1;
  
     
@@ -565,7 +565,9 @@ min-height: 100px;
       display: flex;
       flex-direction: column;
       width: 50%;
-      
+      justify-content: center;
+      align-items: center;
+      transform: translate(6px, -20px)
     }
 
 
@@ -594,6 +596,7 @@ min-height: 100px;
 
 
 #YourName{
+  font-size: 19px;
   margin: 0;
   padding: 0;
  text-align: center;
@@ -601,16 +604,19 @@ background-color: none;
   text-decoration: none;
   width: 378px;
   height: 85px;
+  border: 2px solid;
+  border-radius: 50px;
 }
 
 #YourName::placeholder {
     font-family: 'Hobo Std'; /* Replace 'YourFontFamily' with the desired font */
-    font-size: 16px; /* Adjust to your preference */
+    font-size: 19px; /* Adjust to your preference */
     color: #000000; /* Adjust placeholder text color */
 }
 
 
 #headername{
+  font-size: 19px;
  margin: 0;
   padding: 0;
   text-align: center;
@@ -618,16 +624,18 @@ background-color: none;
   text-decoration: none;
   width: 378px;
   height: 85px;
+  border: 2px solid;
+  border-radius: 50px;
 }
 #headername::placeholder {
     font-family: 'Hobo Std'; /* Replace 'YourFontFamily' with the desired font */
-    font-size: 16px; /* Adjust to your preference */
+    font-size: 19px; /* Adjust to your preference */
     color: #000000; /* Adjust placeholder text color */
 }
 
 #date{
   font-family: 'Hobo Std'; /* Replace 'YourFontFamily' with the desired font */
-    font-size: 16px;
+    font-size: 19px;
   text-align: center;
     color: #000000;
  margin: 0;
@@ -636,6 +644,8 @@ background-color: none;
   text-decoration: none;
   width: 378px;
   height: 85px;
+  border: 2px solid;
+  border-radius: 50px;
 }
 
 
@@ -647,16 +657,10 @@ background-color: none;
   text-decoration: none;
   width: 378px;
   height: 85px;
+  border: 2px solid;
+  border-radius: 50px;
 }
-.overlay-text {
-    position: absolute;
-    transform: translate(0%, 0%);
-    font-family: 'Hobo Std'; 
-    font-size: 16px; 
-    color: #000000; 
-    pointer-events: none;
-   z-index: 3;/* Ensures it doesn't interfere with the color input */
-}
+
 
 .checkbox-container {
     position: relative;
@@ -673,11 +677,13 @@ input[type="checkbox"] {
    font-family: 'Hobo Std'; 
    font-size: 16px; 
    color: #000000; 
+  
+  
 }
 
 .selection-text {
   font-family: 'Hobo Std'; 
-    font-size: 16px; 
+    font-size: 19px; 
     display: none; /* Hide the text initially */
     position: absolute;
     bottom: -12px;
@@ -708,7 +714,8 @@ input[type="checkbox"]:checked + label + .selection-text {
     width: 388px;
     height: 364px;
     margin: 0 auto;
-    background-color: 'eae1f7; /* Set the background to white */
+      /* Set the background to white */
+    
 }
 
 .circle-input {
@@ -740,7 +747,7 @@ input[type="checkbox"]:checked + label + .selection-text {
 .circle-text-svg {
   
   
-    width: 86%;
+    width: 87%;
     height: 100%;
     position: absolute;
     top: 0;
@@ -761,8 +768,8 @@ text {
 .image-preview-container {
     position: absolute;
     width: 75%;
-    height: 75%;
-    top: 45;
+    height: 79%;
+    top: 36;
     left: 45;
     display: flex;
     justify-content: center;
@@ -783,7 +790,7 @@ text {
   height: 301px;
   width: auto;
  image-rendering: pixelated;
-  transform: translate(39px, 40px) 
+  transform: translate(-31px, 32px) 
 }
 
 
@@ -797,17 +804,27 @@ text {
             height: 100vh;
             scroll-snap-align: start;
             scroll-snap-type: y mandatory;
+            position: relative;
         }
-        .section button {
+        .next-button {
+           font-family: Hobo Std;
             margin-top: 20px;
             padding: 10px 20px;
-            font-size: 16px;
+            font-size: 19px;
             cursor: pointer;
-            background-color: #ecef43;
+            background-color: #dc38f6;
             border: 2px solid;
-            border-radius: 3px;
+            border-radius: 50px;
+            position: absolute;
+            
+          height: 50px
         }
 
+.bu-box {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
 
 
 
@@ -816,7 +833,6 @@ text {
     height: 70vh;
     background: radial-gradient(circle, #f4edff, #ffeb4b);
     border-radius: 50%;
-    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -825,4 +841,14 @@ text {
     display: flex;
     justify-content: center;
     align-items: center;
+  position: absolute;
+  bottom: 0;
+}
+
+.sec-text {
+  font-size: 34px;
+}
+
+.and-text {
+  font-size: 16px;
 }
