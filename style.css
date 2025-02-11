@@ -120,7 +120,7 @@ padding-left: 2vh;
   background-image: url("./ImageEffects/004Frame.png");
   background-repeat: repeat; 
   height: 75px; /* Adjust height as needed */ 
-  background-color: #ffffff;
+  background-color: #dc38f6;
 }
 .imgvorschau2 { width: 100%; 
   background-image: url("./ImageEffects/005Frame.png");
@@ -306,7 +306,6 @@ nav {
 
   padding: auto;
   margin: -4px;
-  text-overflow: ellipsis;
   z-index: 3;
   overflow: hidden; 
   
@@ -325,6 +324,7 @@ outline-color: #e8ff66;
   margin-top: 80px;
     z-index: 0 ; /* Make sure it’s on top */
   padding-bottom: 15%;
+  overflow: hidden;
 }
 
 .img img {
@@ -388,14 +388,14 @@ outline-color: #e8ff66;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 192px;
+  width: 200px;
   z-index: 50;
 }
 
 .kunstwerk-up {
     display: flex;
   justify-content: space-between;
-  font-size: 11px;
+  font-size: 12px;
   transform: translate(0, 122px);
   margin: 0 5;
 
@@ -433,7 +433,7 @@ outline-color: #e8ff66;
 
 
 
-.kunstwerk-left{  font-size: 11px;
+.kunstwerk-left{  font-size: 12px;
   flex: 1;
   transform: translate(0, 279px);
   margin: 0 5px; /* Optional: fügt Abstand zwischen den Spalten hinzu */
@@ -442,10 +442,11 @@ outline-color: #e8ff66;
   border-radius:20px;
   width: auto;
 text-align: center;
+  
 }
 
 .kunstwerk-right {
-  font-size: 11px;
+  font-size: 12px;
   flex: 1;
    transform: translate(0, 279px);
   margin: 0 5px; /* Optional: fügt Abstand zwischen den Spalten hinzu */
