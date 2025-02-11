@@ -6,7 +6,7 @@
     
     <!--  This appears as your tab's title -->
     <title>Framed Nostalgia Editor</title>
-    
+     <link rel="icon" type="image/png" href="./assets/stern05.png">
     <!-- Call on style.css -->
     <link rel="stylesheet" href="./style.css" type="text/css" />
 
@@ -79,7 +79,7 @@
     </div>
 </div>
         <div class="bu-box">
-        <button class="next-button" onclick="document.getElementById('sec-02').scrollIntoView({behavior: 'smooth'}); return false;">Next Section
+        <button class="next-button" onclick="document.getElementById('sec-02').scrollIntoView({behavior: 'smooth'}); return false;">Next
         </button>
         </div>
         
@@ -95,8 +95,8 @@
         <div class="sec-text">Your Name</div>
         <input type="text" class="item01-input" font-family="Hobo Std" placeholder="..." id="YourName" maxlength="12">
        <div class="bu-box">
-         <button class="next-button" onclick="document.getElementById('sec-03').scrollIntoView({behavior: 'smooth'}); return false;">Next Section</button>
-        <button class="last-button" onclick="document.getElementById('sec-01').scrollIntoView({behavior: 'smooth'}); return false;">Back</button>
+      <div>   <button class="next-button" onclick="document.getElementById('sec-03').scrollIntoView({behavior: 'smooth'}); return false;">Next</button></div>
+     <div>   <button class="last-button" onclick="document.getElementById('sec-01').scrollIntoView({behavior: 'smooth'}); return false;">Back</button></div>
         </div>
         <div class="gradient-circle"></div>  
     </div>
@@ -107,7 +107,7 @@
         <div class="sec-text">Give it a Title</div>
        <input type="text" class="item01-input" placeholder="...!" id="HeaderName" maxlength="12">
         <div class="bu-box">
-        <button class="next-button" onclick="document.getElementById('sec-04').scrollIntoView({behavior: 'smooth'}); return false;">Next Section</button>
+        <button class="next-button" onclick="document.getElementById('sec-04').scrollIntoView({behavior: 'smooth'}); return false;">Next</button>
         <button class="last-button" onclick="document.getElementById('sec-02').scrollIntoView({behavior: 'smooth'}); return false;">Back</button>
         </div>
         <div class="gradient-circle"></div>  
@@ -124,7 +124,7 @@
          onfocus="if(this.value==='TT.MM.JJJJ'){this.value='';this.type='date';}"
          onblur="if(this.value===''){this.type='text';this.value='TT.MM.JJJJ;}">
         <div class="bu-box">
-        <button class="next-button" onclick="document.getElementById('sec-05').scrollIntoView({behavior: 'smooth'}); return false;">Next Section</button>
+        <button class="next-button" onclick="document.getElementById('sec-05').scrollIntoView({behavior: 'smooth'}); return false;">Next</button>
         <button class="last-button" onclick="document.getElementById('sec-03').scrollIntoView({behavior: 'smooth'}); return false;">Back</button>
         </div>
         <div class="gradient-circle"></div>  
@@ -136,7 +136,7 @@
         <div class="sec-text">Choose your Color</div>
          <input type="color" id="farbe" value="#dc38f6" onchange=ChangeEditorOnce() style="min-height: 25px">
         <div class="bu-box">
-        <button class="next-button" onclick="document.getElementById('sec-06').scrollIntoView({behavior: 'smooth'}); return false;">Next Section</button>
+        <button class="next-button" onclick="document.getElementById('sec-06').scrollIntoView({behavior: 'smooth'}); return false;">Next</button>
         <button class="last-button" onclick="document.getElementById('sec-04').scrollIntoView({behavior: 'smooth'}); return false;">Back</button>
         </div>
         <div class="gradient-circle"></div>  
@@ -181,7 +181,7 @@
         </div>
     </div>
        <div class="bu-box">
-         <button class="next-button" onclick="document.getElementById('sec-07').scrollIntoView({behavior: 'smooth'}); return false;">Next Section</button>
+         <button class="next-button" onclick="document.getElementById('sec-07').scrollIntoView({behavior: 'smooth'}); return false;">Next</button>
         <button class="last-button" onclick="document.getElementById('sec-05').scrollIntoView({behavior: 'smooth'}); return false;">Back</button>
         </div>
         <div class="gradient-circle"></div>  
@@ -224,7 +224,10 @@
   </form>
 </div>
     </div>
-          <div class="gradient-circle"></div>  
+      <div class="bu-box">
+        <button class="last-button" onclick="document.getElementById('sec-06').scrollIntoView({behavior: 'smooth'}); return false;">Back</button>
+        </div>   
+      <div class="gradient-circle"></div>  
      </div>
   
      </div>  
@@ -337,12 +340,12 @@ document.addEventListener("DOMContentLoaded", () => {
        
     
     .copy-button {
-      width: 157px; /* Adjust the size as needed */
-      height: 61px; /* Adjust the size as needed */
-      background-color: #ffeb4b;
+      width: 144px; /* Adjust the size as needed */
+      height: 87px; /* Adjust the size as needed */
+      background-color: #fff44b;
       font-family: 'Hobo Std';
       font-weight: bold;
-      font-size: 19px;
+      font-size: 27px;
       color: black;
       border: 2px solid #000000; 
       border-radius: 50px;
@@ -354,8 +357,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
        
          .input-button {
-      width: 200px; /* Adjust the size as needed */
-      height: 91px; /* Adjust the size as needed */
+      width: 241px; /* Adjust the size as needed */
+      height: 106px; /* Adjust the size as needed */
       background-color: f4edff;
       font-family: 'Hobo Std';
       color: transparent;
@@ -374,9 +377,9 @@ document.addEventListener("DOMContentLoaded", () => {
        
        .overlay-text-form {
     position: absolute;
-    transform: translate(35%, 35%);
+    transform: translate(23%, 24%);
     font-family: 'Hobo Std'; 
-    font-size: 19px; 
+    font-size: 27px; 
     color: #000000; 
     pointer-events: none;
    z-index: 3;/* Ensures it doesn't interfere with the color input */

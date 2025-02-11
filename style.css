@@ -10,7 +10,7 @@
 
 body {
   font-family: Hobo Std; 
- /* hier wäre ein raster, aber das bild ist jetzt ins raster gegangen :D */
+ /* hier äre ein raster, aber das bild ist jetzt ins raster gegangen :D */
       
   background-repeat: round;
   text-decoration: none;
@@ -84,19 +84,28 @@ position: fixed;
 }
 
 .wave-text {
+  position: absolute;
   display: flex;
+  max-width: 997px;
   flex-wrap: wrap;
   font-size: 34px;
   line-height: 42px;
 padding-left: 2vh;
   color: black;
-  transform: translate(0, -23vh)
-  
+  transform: translate(0, -23vh);
+
 
  
 }
 
+.wave-text a {
+  color: black;
+  text-decoration: none; /* Optional: Remove underline from link */
+}
 
+.wave-text a:hover {
+  text-decoration: underline; /* Optional: Underline on hover */
+ }
 
 
 
@@ -810,20 +819,34 @@ text {
            font-family: Hobo Std;
             margin-top: 20px;
             padding: 10px 20px;
-            font-size: 19px;
+            font-size: 27px;
             cursor: pointer;
             background-color: #dc38f6;
             border: 2px solid;
             border-radius: 50px;
-            position: absolute;
-            
+          height: 50px
+        }
+
+.last-button {
+           font-family: Hobo Std;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 27px;
+            cursor: pointer;
+            background-color: #dc38f6;
+            border: 2px solid;
+            border-radius: 50px;
           height: 50px
         }
 
 .bu-box {
-  width: 100%;
+  width: 106vh;
+  height: auto;
+  z-index: 3;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  position: absolute;
 }
 
 
@@ -850,5 +873,5 @@ text {
 }
 
 .and-text {
-  font-size: 16px;
+  font-size: 20px;
 }
