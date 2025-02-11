@@ -92,7 +92,7 @@ position: fixed;
   line-height: 42px;
 padding-left: 2vh;
   color: black;
- top: 20%;
+ top: 32%;
 
 
  
@@ -840,7 +840,7 @@ text {
         }
 
 .bu-box {
-  width: 106vh;
+ width: 106vh;
   height: auto;
   z-index: 3;
   display: flex;
