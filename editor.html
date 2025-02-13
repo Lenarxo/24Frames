@@ -94,13 +94,13 @@
         
         <div class="sec-text">Your Name</div>
         <input type="text" class="item01-input" font-family="Hobo Std" placeholder="..." id="YourName" maxlength="12">
-       
-        <div class="gradient-circle"></div>  
-    </div>
-<div class="bu-box">
+       <div class="bu-box">
       <div>   <button class="next-button" onclick="document.getElementById('sec-03').scrollIntoView({behavior: 'smooth'}); return false;">Next</button></div>
      <div>   <button class="last-button" onclick="document.getElementById('sec-01').scrollIntoView({behavior: 'smooth'}); return false;">Back</button></div>
-        </div></div>
+        </div>
+        <div class="gradient-circle"></div>  
+    </div>
+</div>
    
       <!-- Titel >-->
     <div class="section sec-03" id="sec-03">
@@ -212,7 +212,7 @@
              
  <div class="outercont-buttons02">     
 <!-- The button used to copy the text -->
-<button class="copy-button" onclick="CopyEachOne()">Click & Copy :)</button> <br>
+<button class="copy-button" onclick="CopyEachOne()">Click & <br>Copy :)</button> <br>
 <br>
   <div class="and-text">aaand.. </div>
  <br>
@@ -340,12 +340,12 @@ document.addEventListener("DOMContentLoaded", () => {
        
     
     .copy-button {
-      width: 144px; /* Adjust the size as needed */
-      height: 87px; /* Adjust the size as needed */
+      width: 116px; /* Adjust the size as needed */
+      height: 72px; /* Adjust the size as needed */
       background-color: #fff44b;
       font-family: 'Hobo Std';
       font-weight: bold;
-      font-size: 27px;
+      font-size: 19px;
       color: black;
       border: 2px solid #000000; 
       border-radius: 50px;
@@ -357,8 +357,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
        
          .input-button {
-      width: 241px; /* Adjust the size as needed */
-      height: 106px; /* Adjust the size as needed */
+      width: 168px; /* Adjust the size as needed */
+      height: 79px; /* Adjust the size as needed */
       background-color: f4edff;
       font-family: 'Hobo Std';
       color: transparent;
@@ -379,7 +379,7 @@ document.addEventListener("DOMContentLoaded", () => {
     position: absolute;
     transform: translate(23%, 24%);
     font-family: 'Hobo Std'; 
-    font-size: 27px; 
+    font-size: 19px; 
     color: #000000; 
     pointer-events: none;
    z-index: 3;/* Ensures it doesn't interfere with the color input */
