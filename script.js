@@ -155,7 +155,17 @@ if (InputValuesArray.at(1) && UsersBackground) {
   });  // end of the getJSON   
 }); // end of document ready
   
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('body *').forEach(element => {
+      element.addEventListener('mouseenter', function() {
+        document.body.classList.add('grow-cursor');
+      });
 
+      element.addEventListener('mouseleave', function() {
+        document.body.classList.remove('grow-cursor');
+      });
+    });
+  });
 
 // thank you https://github.com/benborgers/opensheet 
 

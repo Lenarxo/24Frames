@@ -18,12 +18,22 @@ body {
   position: relative;
   max-width: 100%;  /* remove this for a full-width layout */
   margin: 0 auto;  /* centers the layout */
-  
-  
+  cursor: url('./assets/stern05.png') 16 16, auto;
+   image-rendering: pixelated;
 }
 
+a, button, input, textarea, select {
+  cursor: url('./assets/stern05.png'), auto; image-rendering: pixelated;/* Ensure links, buttons, and form elements use custom cursor */
+}
 
+a:hover, button:hover, input:hover, textarea:hover, select:hover {
+  cursor: url('./assets/stern05.png'), auto;  image-rendering: pixelated;/* Hover state */
+}
 
+a:active, button:active, input:active, textarea:active, select:active {
+  cursor: url('./assets/stern05.png'), auto;  image-rendering: pixelated;/* Active state */
+
+}
 
 /* ----titelseite---- */
 
@@ -90,8 +100,8 @@ position: fixed;
   max-width: 570px;
   flex-wrap: wrap;
   font-size: 20px;
- background-color: dc38f6;
-padding-left: 2vh;
+   background-color: #dc38f6;
+    padding-left: 2vh;
   color: black;
  top: 32%;
   border: 2px solid;
@@ -298,13 +308,13 @@ nav {
   margin: auto;
     flex: 1;
     display: flex;
-    overflow: auto;
+   
   align-items:baseline;
   flex-direction: row;
   flex-flow: wrap;
   justify-content: center;
   background-color: #f4edff;
- 
+  overflow: hidden; 
   
 }
 
@@ -319,7 +329,7 @@ nav {
   
   min-width: 350px; 
   min-height: auto;
-
+  text-overflow: ellipsis;
   padding: auto;
   margin: -4px;
   z-index: 3;
@@ -340,7 +350,7 @@ outline-color: #e8ff66;
   margin-top: 80px;
     z-index: 0 ; /* Make sure it’s on top */
   padding-bottom: 15%;
-  overflow: hidden;
+  
 }
 
 .img img {
