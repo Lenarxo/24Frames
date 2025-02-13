@@ -86,16 +86,17 @@ position: fixed;
 .wave-text {
   position: absolute;
   display: flex;
-  max-width: 544px;
+  justify-content: center;
+  max-width: 570px;
   flex-wrap: wrap;
-  font-size: 19px;
- 
+  font-size: 20px;
+ background-color: dc38f6;
 padding-left: 2vh;
   color: black;
  top: 32%;
-
-
- 
+  border: 2px solid;
+  border-radius: 10px;
+  text-align: center;
 }
 
 .wave-text a {
@@ -107,7 +108,12 @@ padding-left: 2vh;
   text-decoration: underline; /* Optional: Underline on hover */
  }
 
-
+.wave-text-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
 
 
 
@@ -936,7 +942,7 @@ text {
 }
 
 .sec-text {
-  font-size: 19px;
+  font-size: 25px;
 }
 
 .and-text {
