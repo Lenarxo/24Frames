@@ -54,7 +54,7 @@
    
    
     <div class="outercont-buttons">  
-<div id="inputer" class="inputerclass">
+
    <form action="copier"> 
    
    
@@ -95,8 +95,9 @@
         <div class="sec-text">Your Name</div>
         <input type="text" class="item01-input" font-family="Hobo Std" placeholder="..." id="YourName" maxlength="12">
        <div class="bu-box">
-      <div>   <button class="next-button" onclick="document.getElementById('sec-03').scrollIntoView({behavior: 'smooth'}); return false;">Next</button></div>
-     <div>   <button class="last-button" onclick="document.getElementById('sec-01').scrollIntoView({behavior: 'smooth'}); return false;">Back</button></div>
+        <button class="next-button" onclick="document.getElementById('sec-03').scrollIntoView({behavior: 'smooth'}); return false;">Next</button>
+       </div> <div class="bu-box02">
+       <button class="last-button" onclick="document.getElementById('sec-01').scrollIntoView({behavior: 'smooth'}); return false;">Back</button>
         </div>
         <div class="gradient-circle"></div>  
     </div>
@@ -108,7 +109,8 @@
        <input type="text" class="item01-input" placeholder="...!" id="HeaderName" maxlength="12">
         <div class="bu-box">
         <button class="next-button" onclick="document.getElementById('sec-04').scrollIntoView({behavior: 'smooth'}); return false;">Next</button>
-        <button class="last-button" onclick="document.getElementById('sec-02').scrollIntoView({behavior: 'smooth'}); return false;">Back</button>
+       </div> <div class="bu-box02">
+         <button class="last-button" onclick="document.getElementById('sec-02').scrollIntoView({behavior: 'smooth'}); return false;">Back</button>
         </div>
         <div class="gradient-circle"></div>  
     </div>
@@ -120,11 +122,12 @@
     <!-- datum >-->
     <div class="section sec-04" id="sec-04">
         <div class="sec-text">Date of your Nostalgic thing</div>
-         <input type="text" id="date" value="TT.MM.JJJJ" 
-         onfocus="if(this.value==='TT.MM.JJJJ'){this.value='';this.type='date';}"
-         onblur="if(this.value===''){this.type='text';this.value='TT.MM.JJJJ;}">
+         <input type="text" id="date" value="tt.mm.jjjj" 
+         onfocus="if(this.value==='tt.mm.jjjj'){this.value='';this.type='date';}"
+         onblur="if(this.value===''){this.type='text';this.value='tt.mm.jjjj;}">
         <div class="bu-box">
         <button class="next-button" onclick="document.getElementById('sec-05').scrollIntoView({behavior: 'smooth'}); return false;">Next</button>
+       </div> <div class="bu-box02">
         <button class="last-button" onclick="document.getElementById('sec-03').scrollIntoView({behavior: 'smooth'}); return false;">Back</button>
         </div>
         <div class="gradient-circle"></div>  
@@ -137,6 +140,7 @@
          <input type="color" id="farbe" value="#dc38f6" onchange=ChangeEditorOnce() style="min-height: 25px">
         <div class="bu-box">
         <button class="next-button" onclick="document.getElementById('sec-06').scrollIntoView({behavior: 'smooth'}); return false;">Next</button>
+        </div> <div class="bu-box02">
         <button class="last-button" onclick="document.getElementById('sec-04').scrollIntoView({behavior: 'smooth'}); return false;">Back</button>
         </div>
         <div class="gradient-circle"></div>  
@@ -182,6 +186,7 @@
     </div>
        <div class="bu-box">
          <button class="next-button" onclick="document.getElementById('sec-07').scrollIntoView({behavior: 'smooth'}); return false;">Next</button>
+        </div> <div class="bu-box02">
         <button class="last-button" onclick="document.getElementById('sec-05').scrollIntoView({behavior: 'smooth'}); return false;">Back</button>
         </div>
         <div class="gradient-circle"></div>  
@@ -200,7 +205,7 @@
 
 
 </form>
-    </div>   
+     
 
 
  <!-- buttons >-->

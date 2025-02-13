@@ -534,7 +534,7 @@ min-height: 100px;
     .item01 {
       width: 184px;
       margin: 10px;
-     
+      z-index: 4;
       background-color: #ffffff;
      border: 2px solid;
   border-radius: 10px;
@@ -580,21 +580,6 @@ min-height: 100px;
     }
 
 
-
-
-
-
-.inputerclass {
-  display: flex;
-  align-items: center;
-  justify-content: center
-  /* Elemente in einer Spalte anordnen */
-
-
-/* Setzt die Breite auf die Hälfte der Seitenbreite */
-}
-
-
   
   form {
       display: flex;
@@ -605,6 +590,7 @@ min-height: 100px;
 
 
 #YourName{
+z-index: 4;
   font-size: 19px;
   margin: 0;
   padding: 0;
@@ -618,6 +604,7 @@ background-color: none;
 }
 
 #YourName::placeholder {
+  z-index: 4;
     font-family: 'Hobo Std'; /* Replace 'YourFontFamily' with the desired font */
     font-size: 19px; /* Adjust to your preference */
     color: #000000; /* Adjust placeholder text color */
@@ -625,6 +612,7 @@ background-color: none;
 
 
 #headername{
+  z-index: 4;
   font-size: 19px;
  margin: 0;
   padding: 0;
@@ -637,12 +625,14 @@ background-color: none;
   border-radius: 50px;
 }
 #headername::placeholder {
+  z-index: 4;
     font-family: 'Hobo Std'; /* Replace 'YourFontFamily' with the desired font */
     font-size: 19px; /* Adjust to your preference */
     color: #000000; /* Adjust placeholder text color */
 }
 
 #date{
+  z-index: 4;
   font-family: 'Hobo Std'; /* Replace 'YourFontFamily' with the desired font */
     font-size: 19px;
   text-align: center;
@@ -660,6 +650,7 @@ background-color: none;
 
 
 #farbe{
+  z-index: 4;
  margin: 0;
   padding: 0;
 background-color: none;
@@ -723,6 +714,7 @@ input[type="checkbox"]:checked + label + .selection-text {
     width: 388px;
     height: 364px;
     margin: 0 auto;
+  z-index: 4;
       /* Set the background to white */
     
 }
@@ -804,17 +796,93 @@ text {
 
 
 
-.section {
+#sec-01 {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             text-align: center;
             height: 100vh;
+            width: 100%;
             scroll-snap-align: start;
             scroll-snap-type: y mandatory;
             position: relative;
         }
+#sec-02 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            height: 100vh;
+            width: 100%;
+            scroll-snap-align: start;
+            scroll-snap-type: y mandatory;
+            position: relative;
+        }
+#sec-03 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            height: 100vh;
+            width: 100%;
+            scroll-snap-align: start;
+            scroll-snap-type: y mandatory;
+            position: relative;
+        }
+#sec-04 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            height: 100vh;
+            width: 100%;
+            scroll-snap-align: start;
+            scroll-snap-type: y mandatory;
+            position: relative;
+        }
+#sec-05 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            height: 100vh;
+            width: 100%;
+            scroll-snap-align: start;
+            scroll-snap-type: y mandatory;
+            position: relative;
+        }
+#sec-06 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            height: 100vh;
+            width: 100%;
+            scroll-snap-align: start;
+            scroll-snap-type: y mandatory;
+            position: relative;
+        }
+#sec-07 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            height: 100vh;
+            width: 100%;
+            scroll-snap-align: start;
+            scroll-snap-type: y mandatory;
+            position: relative;
+        }
+
+
+
         .next-button {
            font-family: Hobo Std;
             margin-top: 20px;
@@ -840,15 +908,25 @@ text {
         }
 
 .bu-box {
- width: 106vh;
+ width: 100%;
   height: auto;
-  z-index: 3;
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   flex-direction: row-reverse;
   position: absolute;
+  padding-right: 4vh;
 }
-
+.bu-box02 {
+ width: 100%;
+  padding-left: 4vh;
+  height: auto;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  position: absolute;
+}
 
 
 .gradient-circle {
