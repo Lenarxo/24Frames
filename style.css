@@ -18,7 +18,7 @@ body {
   position: relative;
   max-width: 100%;  /* remove this for a full-width layout */
   margin: 0 auto;  /* centers the layout */
-  cursor: url('./assets/stern05.png') 16 16, auto;
+  cursor: url('./assets/stern05.png') 22 22, auto;
    image-rendering: pixelated;
 }
 
@@ -34,7 +34,17 @@ a:active, button:active, input:active, textarea:active, select:active {
   cursor: url('./assets/stern05.png'), auto;  image-rendering: pixelated;/* Active state */
 
 }
+input[type="checkbox"], label {
+  cursor: url('./assets/stern05.png'), auto;
+  image-rendering: pixelated;
+}
 
+/* Override cursor styles for hover and active states */
+input[type="checkbox"]:hover, label:hover,
+input[type="checkbox"]:active, label:active {
+  cursor: url('./assets/stern05.png'), auto;
+  image-rendering: pixelated;
+}
 /* ----titelseite---- */
 
 body, html {
@@ -414,7 +424,7 @@ outline-color: #e8ff66;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 200px;
+  width: 205px;
   z-index: 50;
 }
 
